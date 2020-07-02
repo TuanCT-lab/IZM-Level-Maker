@@ -1,0 +1,852 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <title>Plants vs. Zombies 2 Main Control</title>
+  <link rel="stylesheet" href="assets/mdui-v0.4.2/css/mdui.min.css"/>
+  <link rel="stylesheet" href="assets/highlight-9.12.0/styles/github-gist.css"/>
+  <link rel="stylesheet" href="assets/highlight-9.12.0/styles/railscasts.css"/>
+  <link rel="stylesheet" href="assets/docs/css/docs.css"/>
+</head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar  mdui-theme-primary-indigo mdui-theme-accent-pink">
+<header class="mdui-appbar mdui-appbar-fixed">
+  <div class="mdui-toolbar mdui-color-theme">
+    <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
+    <a href="https://www.mdui.org/" class="mdui-typo-headline mdui-hidden-xs">Plants vs. Zombies 2 Main Control</a>
+    <a href="index.html" class="mdui-typo-title"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-dialog="{target: '#dialog-docs-theme'}" mdui-tooltip="{content: '设置主题'}"><i class="mdui-icon material-icons">color_lens</i></span>
+    <a href="https://github.com/zdhxiong/mdui" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: '查看 Github'}">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve" class="mdui-icon" style="width: 24px;height:24px;">
+        <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5
+	c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
+	c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4
+	c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7
+	c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5
+	c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"></path>
+      </svg>
+    </a>
+  </div>
+</header>
+
+<div class="mdui-drawer" id="main-drawer">
+  <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
+    <div class="mdui-collapse-item mdui-collapse-item-open">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">near_me</i>
+        <div class="mdui-list-item-content">Level making tool</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+        <a href="download.html" class="mdui-list-item mdui-ripple mdui-list-item-active">Wave Creator</a>
+        <a href="tide.html" class="mdui-list-item mdui-ripple ">Tide</a>
+      </div>
+    </div>
+
+    <div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">layers</i>
+        <div class="mdui-list-item-content">Level Generator</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+        <a href="color.html" class="mdui-list-item mdui-ripple ">颜色与主题</a>
+        <a href="font.html" class="mdui-list-item mdui-ripple ">字体</a>
+        <a href="grid.html" class="mdui-list-item mdui-ripple ">网格布局</a>
+        <a href="typo.html" class="mdui-list-item mdui-ripple ">排版</a>
+        <a href="icon.html" class="mdui-list-item mdui-ripple ">图标</a>
+        <a href="media.html" class="mdui-list-item mdui-ripple ">媒体</a>
+        <a href="helper.html" class="mdui-list-item mdui-ripple ">辅助类</a>
+        <a href="shadow.html" class="mdui-list-item mdui-ripple ">阴影</a>
+      </div>
+    </div>
+
+    <div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">widgets</i>
+        <div class="mdui-list-item-content">Get File</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+        <a href="ripple.html" class="mdui-list-item mdui-ripple ">涟漪动画效果</a>
+        <a href="button.html" class="mdui-list-item mdui-ripple ">按钮</a>
+        <a href="fab.html" class="mdui-list-item mdui-ripple ">浮动操作按钮</a>
+        <a href="select.html" class="mdui-list-item mdui-ripple ">下拉选择</a>
+        <a href="divider.html" class="mdui-list-item mdui-ripple ">分隔线</a>
+        <a href="panel.html" class="mdui-list-item mdui-ripple ">可扩展面板</a>
+        <a href="textfield.html" class="mdui-list-item mdui-ripple ">文本框</a>
+        <a href="selection_control.html" class="mdui-list-item mdui-ripple ">选择控件</a>
+        <a href="slider.html" class="mdui-list-item mdui-ripple ">滑块</a>
+        <a href="list.html" class="mdui-list-item mdui-ripple ">列表</a>
+        <a href="list_control.html" class="mdui-list-item mdui-ripple ">列表控制</a>
+        <a href="grid_list.html" class="mdui-list-item mdui-ripple ">网格列表</a>
+        <a href="tab.html" class="mdui-list-item mdui-ripple ">Tab 选项卡</a>
+        <a href="toolbar.html" class="mdui-list-item mdui-ripple ">工具栏</a>
+        <a href="appbar.html" class="mdui-list-item mdui-ripple ">应用栏</a>
+        <a href="drawer.html" class="mdui-list-item mdui-ripple ">抽屉式导航</a>
+        <a href="bottom_nav.html" class="mdui-list-item mdui-ripple ">底部导航栏</a>
+        <a href="card.html" class="mdui-list-item mdui-ripple ">卡片</a>
+        <a href="chip.html" class="mdui-list-item mdui-ripple ">纸片</a>
+        <a href="tooltip.html" class="mdui-list-item mdui-ripple ">工具提示</a>
+        <a href="snackbar.html" class="mdui-list-item mdui-ripple ">Snackbar</a>
+        <a href="table.html" class="mdui-list-item mdui-ripple ">表格</a>
+        <a href="dialog.html" class="mdui-list-item mdui-ripple ">对话框</a>
+        <a href="menu.html" class="mdui-list-item mdui-ripple ">菜单</a>
+        <a href="progress.html" class="mdui-list-item mdui-ripple ">进度指示器</a>
+      </div>
+    </div>
+
+    <div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">view_carousel</i>
+        <div class="mdui-list-item-content">Donate</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+        <a href="collapse.html" class="mdui-list-item mdui-ripple ">Collapse</a>
+        <a href="headroom.html" class="mdui-list-item mdui-ripple ">Headroom</a>
+      </div>
+    </div>
+
+    <div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">local_mall</i>
+        <div class="mdui-list-item-content">Admin Contact</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+        <a href="material_icon.html" class="mdui-list-item mdui-ripple ">Material 图标</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a id="anchor-top"></a>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body background="./PVZ2GRIDITEMS_files/bg.png" style="background-repeat: no-repeat;">
+    <div style="width: 396px; height: 51px;"><canvas id="0x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div><div style="width: 396px; height: 51px;"><canvas id="0x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></div><div style="width: 400px; height: 51px;"><canvas id="0x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div><div style="width: 400px; height: 51px;"><canvas id="0x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div></canvas></div><div style="width: 600px; height: 51px;"><canvas id="0x5" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x5" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x5" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x5" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x5" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x5" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x5" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x5" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x5" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas>
+</style></div>
+    <div style="margin-top: 15px">
+	<p> Wave Number:
+    <input type="text" id="wavenumber" style="width: 2%" value="">
+    </p>
+	<p> Additional Plantfood:
+    <input type="text" id="plantfood" style="width: 2%" value="0">
+    </p>
+	<p> DisableRandomSpawns (true = const):
+    <input type="text" id="random" style="width: 3%" value="true">
+    </p>
+Want jam? <p><a href="./WaveCreatorJam.html">Click here</a></p>
+    </p>
+        <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/mummy.png" id="1" onclick="selectSprite(event)" ">
+        <img src="./PVZ2GRIDITEMS_files/zombies/mummy_armor1.png" id="2" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/mummy_armor2.png" id="3" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/mummy_armor4.png" id="4" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/mummy_flag.png" id="151" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/treasureyeti.png" id="156" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/vase_gargantuar.png" id="157" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/cleopatra.png" id="158" onclick="selectSprite(event)"">
+    </div>
+	<div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/mummy_flag_veteran.png" id="152" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/ra.png" id="156" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/camel_segment.png" id="153" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/camel_onehump.png" id="154" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/camel_twohump.png" id="155" onclick="selectSprite(event)"">
+    </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/camel_manyhump.png" id="6" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/explorer.png" id="7" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/explorer_veteran.png" id="8" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/tomb_raiser.png" id="9" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/pharaoh.png" id="10" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/egypt_imp.png" id="11" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/egypt_gargantuar.png" id="12" onclick="selectSprite(event)"">
+    </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/pirate.png" id="13" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/pirate_armor1.png" id="14" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/pirate_armor2.png" id="15" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/pirate_armor4.png" id="16" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/pirate_flag.png" id="17" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/pirate_flag_veteran.png" id="18" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/swashbuckler.png" id="19" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/seagull.png" id="20" onclick="selectSprite(event)"">
+    </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/pelican.png" id="21" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/barrelroller.png" id="22" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/pirate_imp.png" id="23" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/cannon.png" id="24" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/pirate_captain.png" id="25" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/pirate_gargantuar.png" id="26" onclick="selectSprite(event)"">
+        </div>
+    <div>
+	    
+        <img src="./PVZ2GRIDITEMS_files/zombies/cowboy.png" id="27" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/cowboy_armor1.png" id="28" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/cowboy_armor2.png" id="29" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/cowboy_armor4.png" id="30" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/cowboy_flag.png" id="31" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/cowboy_flag_veteran.png" id="32" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/prospector.png" id="33" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/piano.png" id="34" onclick="selectSprite(event)"">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/poncho.png" id="35" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/poncho_no_plate.png" id="36" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/poncho_plate.png" id="37" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/chicken_farmer.png" id="38" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/chicken.png" id="39" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/west_bull.png" id="40" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/west_bull_veteran.png" id="41" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/west_bullrider.png" id="42" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/cowboy_gargantuar.png" id="43" onclick="selectSprite(event)"">
+		
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/future.png" id="39" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/future_armor1.png" id="44" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/future_armor2.png" id="45" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/future_armor4.png" id="46" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/future_flag.png" id="47" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/future_flag_veteran.png" id="48" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/future_jetpack.png" id="49" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/future_jetpack_disco.png" id="50" onclick="selectSprite(event)"">
+		        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/future_jetpack_veteran.png" id="51" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/future_protector.png" id="52" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/mech_cone.png" id="53" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/future_imp.png" id="54" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/disco_mech.png" id="55" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/football_mech.png" id="56" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/future_gargantuar.png" id="57" onclick="selectSprite(event)"">
+    <div>
+        
+        </div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/dark.png" id="58" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dark_armor1.png" id="59" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dark_armor2.png" id="60" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dark_armor3.png" id="61" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dark_flag.png" id="62" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dark_imp.png" id="63" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dark_juggler.png" id="64" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/dark_wizard.png" id="65" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dark_king.png" id="66" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dark_imp_dragon.png" id="67" onclick="selectSprite(event)"">
+		        <img src="./PVZ2GRIDITEMS_files/zombies/dark_gargantuar.png" id="68" onclick="selectSprite(event)"">
+        </div>
+    <div>
+        
+
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach.png" id="69" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/beach_armor1.png" id="70" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach_armor2.png" id="71" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach_fem.png" id="72" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach_fem_armor1.png" id="73" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach_fem_armor2.png" id="74" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach_flag.png" id="75" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach_snorkel.png" id="76" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach_surfer.png" id="77" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach_imp.png" id="78" onclick="selectSprite(event)"">
+        </div>
+    <div>
+        
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach_octopus.png" id="79" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach_fisherman.png" id="80" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/beach_gargantuar.png" id="81" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage.png" id="82" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_armor1.png" id="83" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_armor2.png" id="84" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_armor3.png" id="85" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_flag.png" id="86" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_hunter.png" id="87" onclick="selectSprite(event)"">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_dodo.png" id="88" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_imp.png" id="89" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_troglobite.png" id="90" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_troglobite_2block.png" id="91" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_troglobite_1block.png" id="92" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_weaselhoarder.png" id="93" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_weasel.png" id="94" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/iceage_gargantuar.png" id="95" onclick="selectSprite(event)"">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity.png" id="96" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_armor1.png" id="97" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_armor2.png" id="98" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_flag.png" id="99" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_excavator.png" id="100" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_jane.png" id="101" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_lostpilot.png" id="102" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_imp.png" id="103" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_bug.png" id="104" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_bug_armor1.png" id="105" onclick="selectSprite(event)"">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_bug_armor2.png" id="106" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_impporter.png" id="107" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_relichunter.png" id="108" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_crystalskull.png" id="109" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/lostcity_gargantuar.png" id="110" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties.png" id="111" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_armor1.png" id="112" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_armor2.png" id="113" onclick="selectSprite(event)"">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_flag.png" id="114" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_punk.png" id="115" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_glitter.png" id="116" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_mc.png" id="117" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_imp.png" id="118" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_breakdancer.png" id="119" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_arcade.png" id="120" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_8bit.png" id="121" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_8bit_armor1.png" id="122" onclick="selectSprite(event)"">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_8bit_armor2.png" id="123" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_boombox.png" id="124" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/eighties_gargantuar.png" id="125" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dino.png" id="126" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dino_armor1.png" id="127" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dino_armor2.png" id="128" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/dino_armor3.png" id="130" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/dino_armor4.png" id="131" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/dino_flag.png" id="132" onclick="selectSprite(event)"">
+    </div>
+	<div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/dino_flag_veteran.png" id="133" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dino_imp.png" id="134" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dino_bully.png" id="135" onclick="selectSprite(event)"">
+        <img src="./PVZ2GRIDITEMS_files/zombies/dino_bully_veteran.png" id="135" onclick="selectSprite(event)"">
+		<img src="./PVZ2GRIDITEMS_files/zombies/dino_gargantuar.png" id="129" onclick="selectSprite(event)"">
+    </div>
+	<div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/tutorial.png" id="138" onclick="selectSprite(event)" ;">
+        <img src="./PVZ2GRIDITEMS_files/zombies/tutorial_armor1.png" id="139" onclick="selectSprite(event)" ;">
+        <img src="./PVZ2GRIDITEMS_files/zombies/tutorial_armor2.png" id="140" onclick="selectSprite(event)" ;">
+        <img src="./PVZ2GRIDITEMS_files/zombies/tutorial_armor4.png" id="141" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/tutorial_flag.png" id="142" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/tutorial_flag_veteran.png" id="143" onclick="selectSprite(event)" ;">
+        <img src="./PVZ2GRIDITEMS_files/zombies/tutorial_imp.png" id="144" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/tutorial_gargantuar.png" id="145" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/modern_newspaper.png" id="146" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/newspaper_veteran.png" id="147" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/modern_balloon.png" id="148" onclick="selectSprite(event)" ;">
+        <img src="./PVZ2GRIDITEMS_files/zombies/modern_allstar.png" id="149" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/modern_superfanimp.png" id="150" onclick="selectSprite(event)" ;">
+    </div>
+	<div>
+        <img src="./PVZ2GRIDITEMS_files/zombies/caketank.png" id="238" onclick="selectSprite(event)" ;">
+        <img src="./PVZ2GRIDITEMS_files/zombies/imppear_imp.png" id="239" onclick="selectSprite(event)" ;">
+        <img src="./PVZ2GRIDITEMS_files/zombies/roman.png" id="241" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/roman_armor1.png" id="242" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/roman_armor2.png" id="243" onclick="selectSprite(event)" ;">
+        <img src="./PVZ2GRIDITEMS_files/zombies/roman_armor3.png" id="244" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/roman_armor4.png" id="240" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/roman_ballista.png" id="245" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/roman_flag.png" id="246" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/roman_gargantuar.png" id="247" onclick="selectSprite(event)" ;">
+		<img src="./PVZ2GRIDITEMS_files/zombies/roman_healer.png" id="248" onclick="selectSprite(event)" ;">
+        <img src="./PVZ2GRIDITEMS_files/zombies/roman_imp.png" id="249" onclick="selectSprite(event)" ;">
+    </div>
+	<div>
+    </div>
+<div>
+    <div style="margin-top: 15px">
+        <p id="p1" class="paragraph1"> Grid ID: 8x4</p><p id="p2" class="paragraph1">
+    </p></div>
+    <style type="text/css">
+textarea {
+ width: 410px; height: 250px; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+    </style>
+    <textarea id="xml" rows="20" cols="50" style="display: none;"></textarea> 
+     <p> </p>
+    <button onclick="CompileLevelXML()">Finished</button>
+    <button onclick="togglexmlvisibility()">Toggle Seperate Array</button>
+	<input type="button" value="Copy" id="copy" onclick="copyText();" >
+<script type="text/javascript">
+
+function copyText(){
+ document.getElementById("output").select();
+ document.execCommand('copy');
+}
+</script>
+<input type="checkbox" id="icecubed" style="" onclick="" value="">
+     <p> </p>
+    <textarea id="output" rows="10" cols="50" style="display: none;"></textarea> 
+        <script type="text/javascript">
+        var version = 1.0;
+        var eraser = 547;
+        var iceblock = 548;
+        var array = new Array();
+        document.getElementById('output').style.display = "none";   
+        document.getElementById("xml").value = "";
+        document.getElementById("output").value = ""
+        var mouseOverSprite = document.createElement("img");
+            mouseOverSprite.style.display="block";
+            mouseOverSprite.style.position = "absolute";
+            mouseOverSprite.style.zIndex = "-1";
+        document.body.insertBefore(mouseOverSprite,document.body.firstChild);
+        document.getElementById('xml').style.display = "none";
+        //document.getElementById("xml").value += "\{\n            \"aliases\"\: \[\n                \"Gravestones\"\n            \],\n            \"objclass\"\: \"GravestoneProperties\",\n            \"objdata\"\: \{\n                \"ForceSpawnData\"\: \[\n";
+        document.addEventListener("mousemove",mouseMoveFunction);
+        var lastGridId = null;
+
+        function mouseMoveFunction(e){
+            var p1 = document.getElementById("p1");
+            if(e.target.nodeName == "CANVAS"){
+                p1.innerHTML = " Grid ID: "+e.target.id
+
+                if(e.target.id == lastGridId){
+                    return;
+                }
+                lastGridId = e.target.id;
+                mouseOverSprite.style.visibility ="visible";
+                mouseOverSprite.style.top = e.target.offsetTop+"px";
+                mouseOverSprite.style.left = e.target.offsetLeft+"px";
+            }
+            else{
+                mouseOverSprite.style.visibility ="hidden";
+            }
+        }
+        document.addEventListener("click",mouseClickFunction);
+        function mouseClickFunction(e){
+            if(mouseOverSprite.style.visibility == "visible" && e.target.nodeName == "CANVAS"  && selectedSpriteId != eraser)
+            {
+                var icecubed = document.getElementById("icecubed");
+                var targetRect = e.target.getBoundingClientRect();
+                var a = e.target.id;
+                var x = a.charAt(0);
+				var d = a.charAt(0)-2;
+                var b = e.target.id;
+                var y = b.charAt(2);
+                if(selectedSpriteId != iceblock){
+                document.getElementById("xml").value += (document.getElementById("xml").value.endsWith("}") ? ",\n" : "") + "                    "  
+                if(icecubed.checked == true) {
+                document.getElementById("xml").value += "";
+                }
+                document.getElementById("xml").value += "{\n                        \"Type\"\: \"RTID("+ mouseOverSprite.src.substring(mouseOverSprite.src.lastIndexOf('/')+1).split('.')[0] + "\@ZombieTypes)\", \n                        \"Row\"\:\ \"" + y + "\" \n                    }";
+            }
+            //if(selectedSpriteId = iceblock){
+            //    array.push(e.target.id);
+            //}
+                var icecubed = document.getElementById("icecubed");
+                var newImg = document.createElement("img");
+                newImg.src = mouseOverSprite.src;
+                newImg.style.position = "absolute";
+                newImg.style.left = targetRect.x+"px";
+                newImg.style.top = targetRect.y+"px";
+                newImg.style.zIndex = -1;
+                newImg.className = "newImg";
+                if(icecubed.checked == true){
+                    newImg.style.outline = "blue solid 0.5px";
+                    e.target.style.outline = "rgb(0, 255, 255) solid 2.5px";
+                }
+                newImg.addEventListener("click",function(){
+                if(selectedSpriteId == eraser){
+                    var victim = "";
+                    console.log(e.target.style.outline);
+                        if(e.target.style.outline == "rgba(0, 0, 0, 0.2) solid 0.5px"){
+                         victim = "{\n                        \"Type\"\: \"RTID("+ mouseOverSprite.src.substring(mouseOverSprite.src.lastIndexOf('/')+1).split('.')[0] + "\@ZombieTypes)\", \n                        \"Row\"\:\ \"" + y + "\" \n                    }";
+                         e.target.style.outline == "rgba(0, 0, 0, 0.2) solid 0.5px";
+                        }
+                        if(e.target.style.outline == "rgb(0, 255, 255) solid 2.5px"){
+                            console.log("yay");
+                         victim = "{\n                        \"Type\"\: \"RTID("+ mouseOverSprite.src.substring(mouseOverSprite.src.lastIndexOf('/')+1).split('.')[0] + "\@ZombieTypes)\", \n                        \"Row\"\:\ \"" + y + "\" \n                    }";
+                         e.target.style.outlineColor = "rgba(0, 0, 0, 0.2)";
+                         e.target.style.outlineStyle = "solid";
+                         e.target.style.outlineWidth = "0.5px";
+                        }
+                         console.log(victim);
+
+                        xml = document.getElementById("xml").value;
+                        document.getElementById("xml").value = xml.substr(0,xml.indexOf(victim)) + xml.substr(xml.indexOf(victim) + victim.length + 1, xml.length);
+                        this.remove();
+                        xml3 = document.getElementById("xml").value;
+                        xml4 = xml3.slice(0, -1);
+                        if(xml3.endsWith(",")){
+                        console.log(xml4);
+                            document.getElementById("xml").value = xml4;
+                        }
+
+                   }
+                }
+            );
+                document.body.appendChild(newImg);
+                
+                if(allAddedItems[e.target.id]==null)
+                    allAddedItems[e.target.id] = new Array(newImg);
+                else
+                    allAddedItems[e.target.id].push(newImg); 
+            }
+        }
+        var allAddedItems = new Array();
+        var selectedSpriteId = 1;
+        document.getElementById(selectedSpriteId).style.outline=".5px solid blue";
+        mouseOverSprite.src = document.getElementById(selectedSpriteId).src;
+
+        function selectSprite(e){
+            document.getElementById(selectedSpriteId).style.outline="";
+            e.currentTarget.style.outline = ".5px solid blue";
+            selectedSpriteId = e.currentTarget.id;
+            mouseOverSprite.src = e.currentTarget.src;
+            var canvases = document.getElementsByClassName('newImg');
+            if(selectedSpriteId == eraser){
+                mouseOverSprite.style.pointerEvents="none";
+                //document.getElementById('gridDiv').style.pointerEvents="none";
+                for(i=0;i<canvases.length;i++){
+                    canvases[i].style.zIndex=1;
+                }
+            } else {
+                mouseOverSprite.style.pointerEvents="";
+                for(i=0;i<canvases.length;i++){
+                    canvases[i].style.zIndex=-1;
+                }
+            }
+        }
+        function togglexmlvisibility() {
+        var display = document.getElementById('xml').style.display;
+        if(display == "none") {
+              document.getElementById('xml').style.display = "block";
+        }
+        if(display == "block") {
+              document.getElementById('xml').style.display = "none";
+        }
+     }
+function toggleoutputvisibility() {
+        var display = document.getElementById('output').style.display;
+        if(display == "none")
+              document.getElementById('output').style.display = "block";
+        }
+        function CompileLevelXML() {
+		//var wavenumber = document.getElementById("wavenumber").value;
+		//var plantfood = document.getElementById("plantfood").value;
+		//var jam = document.getElementById("jam").value;
+		//var random = document.getElementById("random").value;
+    var str = document.getElementById("xml").value;
+    toggleoutputvisibility();
+        document.getElementById("output").value += "###Don't forget to add###\n\                    [\n                        \"RTID\(Wave" + document.getElementById("wavenumber").value + "\@CurrentLevel\)\"\n                    ]\n \n        {\n            \"aliases\"\: \[\n                \"Wave" + document.getElementById("wavenumber").value +"\"\n            \],\n            \"objclass\"\: \"SpawnZombiesJitteredWaveActionProps\",\n            \"objdata\"\: { \n                \"DisableRandomSpawns\": " + document.getElementById("random").value + ",\n                \"AdditionalPlantfood\": " + document.getElementById("plantfood").value + ", \n                \"Zombies\"\: [\   \n"
+        document.getElementById("output").value += str;
+        document.getElementById("output").value += "\n                ]\n            }\n \       },";
+        console.log(allAddedItems);
+        }
+//Asuki says Hai!
+    </script>
+    <style>
+        p {
+            color: Blue;
+        }
+        .paragraph1 {
+            font-size: 12px;
+             font-family: Verdana, Arial, Helvetica, sans-serif;
+            line-height: 2px;
+        }
+        .paragraph2 {
+            font-size: 13px;
+             font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+<div class="mdui-dialog" id="dialog-docs-theme">
+  <div class="mdui-dialog-title">设置文档主题</div>
+  <div class="mdui-dialog-content">
+
+    <p class="mdui-typo-title">主题色</p>
+    <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
+      <div class="mdui-col">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-layout" value="" checked/>
+          <i class="mdui-radio-icon"></i>
+          Light
+        </label>
+      </div>
+      <div class="mdui-col">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-layout" value="dark" />
+          <i class="mdui-radio-icon"></i>
+          Dark
+        </label>
+      </div>
+    </div>
+
+    <p class="mdui-typo-title mdui-text-color-theme">主色</p>
+    <form class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
+      <div class="mdui-col mdui-text-color-amber">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="amber" />
+          <i class="mdui-radio-icon"></i>
+          Amber
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-blue">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="blue" />
+          <i class="mdui-radio-icon"></i>
+          Blue
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-blue-grey">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="blue-grey" />
+          <i class="mdui-radio-icon"></i>
+          Blue Grey
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-brown">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="brown" />
+          <i class="mdui-radio-icon"></i>
+          Brown
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-cyan">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="cyan" />
+          <i class="mdui-radio-icon"></i>
+          Cyan
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-deep-orange">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="deep-orange" />
+          <i class="mdui-radio-icon"></i>
+          Deep Orange
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-deep-purple">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="deep-purple" />
+          <i class="mdui-radio-icon"></i>
+          Deep Purple
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-green">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="green" />
+          <i class="mdui-radio-icon"></i>
+          Green
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-grey">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="grey" />
+          <i class="mdui-radio-icon"></i>
+          Grey
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-indigo">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="indigo" checked/>
+          <i class="mdui-radio-icon"></i>
+          Indigo
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-light-blue">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="light-blue" />
+          <i class="mdui-radio-icon"></i>
+          Light Blue
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-light-green">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="light-green" />
+          <i class="mdui-radio-icon"></i>
+          Light Green
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-lime">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="lime" />
+          <i class="mdui-radio-icon"></i>
+          Lime
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-orange">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="orange" />
+          <i class="mdui-radio-icon"></i>
+          Orange
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-pink">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="pink" />
+          <i class="mdui-radio-icon"></i>
+          Pink
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-purple">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="purple" />
+          <i class="mdui-radio-icon"></i>
+          Purple
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-red">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="red" />
+          <i class="mdui-radio-icon"></i>
+          Red
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-teal">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="teal" />
+          <i class="mdui-radio-icon"></i>
+          Teal
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-yellow">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="yellow" />
+          <i class="mdui-radio-icon"></i>
+          Yellow
+        </label>
+      </div>
+    </form>
+
+    <p class="mdui-typo-title mdui-text-color-theme-accent">强调色</p>
+    <form class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
+      <div class="mdui-col mdui-text-color-amber">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="amber" />
+          <i class="mdui-radio-icon"></i>
+          Amber
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-blue">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="blue" />
+          <i class="mdui-radio-icon"></i>
+          Blue
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-cyan">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="cyan" />
+          <i class="mdui-radio-icon"></i>
+          Cyan
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-deep-orange">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="deep-orange" />
+          <i class="mdui-radio-icon"></i>
+          Deep Orange
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-deep-purple">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="deep-purple" />
+          <i class="mdui-radio-icon"></i>
+          Deep Purple
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-green">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="green" />
+          <i class="mdui-radio-icon"></i>
+          Green
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-indigo">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="indigo" />
+          <i class="mdui-radio-icon"></i>
+          Indigo
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-light-blue">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="light-blue" />
+          <i class="mdui-radio-icon"></i>
+          Light Blue
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-light-green">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="light-green" />
+          <i class="mdui-radio-icon"></i>
+          Light Green
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-lime">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="lime" />
+          <i class="mdui-radio-icon"></i>
+          Lime
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-orange">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="orange" />
+          <i class="mdui-radio-icon"></i>
+          Orange
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-pink">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="pink" checked/>
+          <i class="mdui-radio-icon"></i>
+          Pink
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-purple">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="purple" />
+          <i class="mdui-radio-icon"></i>
+          Purple
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-red">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="red" />
+          <i class="mdui-radio-icon"></i>
+          Red
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-teal">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="teal" />
+          <i class="mdui-radio-icon"></i>
+          Teal
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-yellow">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="yellow" />
+          <i class="mdui-radio-icon"></i>
+          Yellow
+        </label>
+      </div>
+    </form>
+
+  </div>
+  <div class="mdui-divider"></div>
+  <div class="mdui-dialog-actions">
+    <button class="mdui-btn mdui-ripple mdui-float-left" mdui-dialog-cancel>恢复默认主题</button>
+    <button class="mdui-btn mdui-ripple" mdui-dialog-confirm>ok</button>
+  </div>
+</div>
+
+<script src="assets/smooth-scroll-11.1.0/smooth-scroll.min.js"></script>
+<script src="assets/holder-2.9.4/holder.min.js"></script>
+<script src="assets/highlight-9.12.0/highlight.pack.js"></script>
+<script src="assets/mdui-v0.4.2/js/mdui.min.js"></script>
+<script>var $$ = mdui.JQ;</script>
+<script src="assets/docs/js/docs.js"></script>
+
