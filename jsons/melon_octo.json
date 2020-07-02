@@ -1,0 +1,190 @@
+{
+            "objclass": "ZombieType", 
+            "aliases": [
+                "melon_octo"
+            ], 
+            "objdata": {
+                "TypeName": "beach_octopus", 
+                "ZombieClass": "ZombieBeachOctopus", 
+                "Properties": "RTID(ZombieMelon@CurrentLevel)", 
+                "ResourceGroups": [
+                    "PlantMelonpult", 
+                    "PlantMelonpultAudio", 
+                    "ZombieBeachOctopusGroup"
+                ], 
+                "AudioGroups": [
+                    "PlantMelonpultAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_Octopus", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_BEACH_OCTOPUS", 
+                "HomeWorld": "beach", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "objclass": "ZombieBeachOctopusProps", 
+            "aliases": [
+                "ZombieMelon"
+            ], 
+            "objdata": {
+                "Speed": 0.18, 
+                "Hitpoints": 700, 
+                "EatDPS": 100, 
+                "CanSpawnPlantFood": true, 
+                "Actions": [
+                    "RTID(ZombieMelonAction@CurrentLevel)"
+                ], 
+                "HitRect": {
+                    "mX": 10, 
+                    "mY": 10, 
+                    "mWidth": 32, 
+                    "mHeight": 95
+                }, 
+                "AttackRect": {
+                    "mX": 15, 
+                    "mY": 0, 
+                    "mWidth": 20, 
+                    "mHeight": 95
+                }, 
+                "Cost": 40, 
+                "WavePointCost": 40, 
+                "Weight": 10, 
+                "ArtCenter": {
+                    "x": 90, 
+                    "y": 125
+                }, 
+                "ShadowOffset": {
+                    "x": 10, 
+                    "y": 0, 
+                    "z": 1.2
+                }, 
+                "GroundTrackName": "ground_swatch", 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness5"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed0"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieProjectileLaunchActionDefinition", 
+            "aliases": [
+                "ZombieMelonAction"
+            ], 
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 8, 
+                    "Max": 8
+                }, 
+                "TimeBetween": {
+                    "Min": 4, 
+                    "Max": 4
+                }, 
+                "Projectile": "RTID(ProjectileMelon@CurrentLevel)", 
+                "ProjectileSound": "Play_Zomb_Egypt_Zomboss_Attack_Rush", 
+                "SpawnOffset": {
+                    "x": 0, 
+                    "y": 0, 
+                    "z": 50
+                }, 
+                "ApexHeight": 250, 
+                "TimeUntilHit": 1.5
+            }
+        }, 
+        {
+            "objclass": "ProjectilePropertySheet", 
+            "aliases": [
+                "ProjectileMelon"
+            ], 
+            "objdata": {
+                "BaseDamage": 89, 
+                "SplashDamage": 38, 
+                "SplashRadius": 64, 
+                "CollisionFlags": [
+                    "griditems", 
+                    "normal_plants", 
+                    "tall_plants", 
+                    "plants", 
+                    "ground"
+                ], 
+                "DamageFlags": [
+                    "lobbed", 
+                    "shooter", 
+                    "catapult"
+                ], 
+                "InitialVelocity": [
+                    {
+                        "Min": -290, 
+                        "Max": -310
+                    }, 
+                    {
+                        "Min": -10, 
+                        "Max": 10
+                    }, 
+                    {
+                        "Min": 500, 
+                        "Max": 700
+                    }
+                ], 
+                "InitialAcceleration": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": -10, 
+                        "Max": -10
+                    }
+                ], 
+                "InitialRotation": {
+                    "Min": 0, 
+                    "Max": 4
+                }, 
+                "InitialScale": {
+                    "Min": 0.9, 
+                    "Max": 0.9
+                }, 
+                "AttachedPAM": "POPANIM_EFFECTS_T_MELON_PROJECTILE", 
+                "AttachedPAMOffset": {
+                    "x": -112.5, 
+                    "y": -111.5
+                }, 
+                "AttachedPAMAnimationToPlay": [
+                    "animation", 
+                    "animation2", 
+                    "animation3"
+                ], 
+                "CollisionRect": {
+                    "mX": -15, 
+                    "mY": -15, 
+                    "mWidth": 30, 
+                    "mHeight": 30
+                }, 
+                "ImpactPAM": "POPANIM_EFFECTS_T_SPLAT_MELONPULT", 
+                "ImpactPAMAnimationToPlay": [
+                    "animation", 
+                    "animation2", 
+                    "animation3"
+                ], 
+                "ImpactSoundEvent": "Play_Plant_MelonPult_Impact", 
+                "ImpactOffset": [
+                    {
+                        "Min": 25, 
+                        "Max": 25
+                    }, 
+                    {
+                        "Min": 15, 
+                        "Max": 15
+                    }
+                ]
+            }
+        }

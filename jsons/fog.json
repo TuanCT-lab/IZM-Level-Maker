@@ -1,0 +1,465 @@
+{
+            "aliases": [
+                "FogSpawn1"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(railcart_cowboy@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "Night came...", 
+                "SuppressActionIfNoGridItemsFound": false, 
+                "ZombieSpawnWaitTime": "2", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(fog@CurrentLevel)"
+                    }, 
+                    {
+                        "Type": "RTID(fog@CurrentLevel)"
+                    }, 
+                    {
+                        "Type": "RTID(fog@CurrentLevel)"
+                    }, 
+                    {
+                        "Type": "RTID(fog@CurrentLevel)"
+                    }, 
+                    {
+                        "Type": "RTID(fog@CurrentLevel)"
+                    }, 
+                    {
+                        "Type": "RTID(fog@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "FogSpawn2"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(railcart_cowboy@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "Night came...", 
+                "SuppressActionIfNoGridItemsFound": false, 
+                "ZombieSpawnWaitTime": "2", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(fog2@CurrentLevel)"
+                    }, 
+                    {
+                        "Type": "RTID(fog2@CurrentLevel)"
+                    }, 
+                    {
+                        "Type": "RTID(fog2@CurrentLevel)"
+                    }, 
+                    {
+                        "Type": "RTID(fog2@CurrentLevel)"
+                    }, 
+                    {
+                        "Type": "RTID(fog2@CurrentLevel)"
+                    }, 
+                    {
+                        "Type": "RTID(fog2@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "fog"
+            ], 
+            "objdata": {
+                "TypeName": "iceage_hunter", 
+                "ZombieClass": "ZombieIceAgeHunter", 
+                "Properties": "RTID(ZombieFog@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieIceAgeHunterGroup", 
+                    "IceAgeFrostWindGroup", 
+                    "FrostbiteIceBlockPlantGroup", 
+                    "FrostbiteIceBlockZombieGroup", 
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AudioGroups": [
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_Hunter", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER", 
+                "HomeWorld": "iceage", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "objclass": "ZombieIceAgeHunterProps", 
+            "aliases": [
+                "ZombieFog"
+            ], 
+            "objdata": {
+                "Speed": 0, 
+                "Hitpoints": 26835353, 
+                "EatDPS": 0, 
+                "CanSpawnPlantFood": false, 
+                "ChillInsteadOfFreeze": true, 
+                "HasShadow": false, 
+                "CanBeFlicked": false, 
+                "CanTriggerZombieWin": false, 
+                "CanSurrender": true, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "Actions": [
+                    "RTID(ZombieFogAction@CurrentLevel)"
+                ], 
+                "HitRect": {
+                    "mX": -10000, 
+                    "mY": 90000, 
+                    "mWidth": 0, 
+                    "mHeight": 0
+                }, 
+                "AttackRect": {
+                    "mX": 15, 
+                    "mY": 1000, 
+                    "mWidth": 90, 
+                    "mHeight": 25
+                }, 
+                "NearAttackRange": 0, 
+                "FarAttackRange": 10, 
+                "Cost": 25, 
+                "WavePointCost": 25, 
+                "Weight": 10, 
+                "SnowballsPerBarrage": 999, 
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "ShadowOffset": {
+                    "x": 10000, 
+                    "y": 0, 
+                    "z": 1.2
+                }, 
+                "GroundTrackName": "ground_swatch", 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed0"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieProjectileActionDefinition", 
+            "aliases": [
+                "ZombieFogAction"
+            ], 
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 0, 
+                    "Max": 8
+                }, 
+                "TimeBetween": {
+                    "Min": 3, 
+                    "Max": 8
+                }, 
+                "TimeBetweenBarrages": {
+                    "Min": 28, 
+                    "Max": 18
+                }, 
+                "Projectile": "RTID(ZombieFogProjectile@CurrentLevel)", 
+                "ProjectileSound": "", 
+                "SpawnOffset": {
+                    "x": 230, 
+                    "y": -448, 
+                    "z": 10
+                }, 
+                "ApexHeight": 100, 
+                "TimeUntilHit": 0.75
+            }
+        }, 
+        {
+            "objclass": "ProjectilePropertySheet", 
+            "aliases": [
+                "ZombieFogProjectile"
+            ], 
+            "objdata": {
+                "HasShadow": false, 
+                "BaseDamage": 0, 
+                "DiesOnImpact": false, 
+                "DamageFlags": [
+                    "shooter"
+                ], 
+                "CollisionFlags": [ ], 
+                "Conditions": [ ], 
+                "InitialVelocity": [
+                    {
+                        "Min": -10, 
+                        "Max": -40
+                    }, 
+                    {
+                        "Min": -5, 
+                        "Max": 5
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 5
+                    }
+                ], 
+                "InitialAcceleration": [
+                    {
+                        "Min": 2, 
+                        "Max": 5
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": -3, 
+                        "Max": 1
+                    }
+                ], 
+                "InitialRotation": {
+                    "Min": 2.9, 
+                    "Max": 3.3
+                }, 
+                "InitialScale": {
+                    "Min": 3, 
+                    "Max": 5
+                }, 
+                "AttachedPAM": "POPANIM_EFFECTS_FROSTBITE_CHILL_WIND", 
+                "AttachedPAMAnimRigClass": "", 
+                "AttachedPAMOffset": {
+                    "x": -1050, 
+                    "y": -150
+                }, 
+                "AttachedPAMAnimationToPlay": [
+                    ""
+                ], 
+                "LayerOverride": "RENDER_LAYER_PARTICLE", 
+                "CollisionRect": {
+                    "mX": -15, 
+                    "mY": -15, 
+                    "mWidth": 30, 
+                    "mHeight": 30
+                }, 
+                "ImpactSoundEvent": "", 
+                "ImpactSoundThrottleTimer": 0.075, 
+                "ImpactPAM": "", 
+                "ImpactPAMAnimationToPlay": [
+                    ""
+                ], 
+                "ImpactOffset": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "fog2"
+            ], 
+            "objdata": {
+                "TypeName": "iceage_hunter", 
+                "ZombieClass": "ZombieIceAgeHunter", 
+                "Properties": "RTID(ZombieFog2@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieIceAgeHunterGroup", 
+                    "IceAgeFrostWindGroup", 
+                    "FrostbiteIceBlockPlantGroup", 
+                    "FrostbiteIceBlockZombieGroup", 
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AudioGroups": [
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_Hunter", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER", 
+                "HomeWorld": "iceage", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "objclass": "ZombieIceAgeHunterProps", 
+            "aliases": [
+                "ZombieFog2"
+            ], 
+            "objdata": {
+                "Speed": 0, 
+                "Hitpoints": 26800000, 
+                "EatDPS": 0, 
+                "CanSpawnPlantFood": false, 
+                "ChillInsteadOfFreeze": true, 
+                "HasShadow": false, 
+                "CanBeFlicked": false, 
+                "CanTriggerZombieWin": false, 
+                "CanSurrender": true, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "Actions": [
+                    "RTID(ZombieFog2Action@CurrentLevel)"
+                ], 
+                "HitRect": {
+                    "mX": -10000, 
+                    "mY": -90000, 
+                    "mWidth": 0, 
+                    "mHeight": 0
+                }, 
+                "AttackRect": {
+                    "mX": 15, 
+                    "mY": 1000, 
+                    "mWidth": 90, 
+                    "mHeight": 25
+                }, 
+                "NearAttackRange": 0, 
+                "FarAttackRange": 10, 
+                "Cost": 25, 
+                "WavePointCost": 25, 
+                "Weight": 10, 
+                "SnowballsPerBarrage": 999, 
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "ShadowOffset": {
+                    "x": 10000, 
+                    "y": 0, 
+                    "z": 1.2
+                }, 
+                "GroundTrackName": "ground_swatch", 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed0"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieProjectileActionDefinition", 
+            "aliases": [
+                "ZombieFog2Action"
+            ], 
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 8, 
+                    "Max": 18
+                }, 
+                "TimeBetween": {
+                    "Min": 18, 
+                    "Max": 28
+                }, 
+                "TimeBetweenBarrages": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "Projectile": "RTID(ZombieFogProjectile2@CurrentLevel)", 
+                "ProjectileSound": "", 
+                "SpawnOffset": {
+                    "x": 230, 
+                    "y": -448, 
+                    "z": 10
+                }, 
+                "ApexHeight": 100, 
+                "TimeUntilHit": 0.75
+            }
+        }, 
+        {
+            "objclass": "ProjectilePropertySheet", 
+            "aliases": [
+                "ZombieFogProjectile2"
+            ], 
+            "objdata": {
+                "HasShadow": false, 
+                "BaseDamage": 0, 
+                "DiesOnImpact": false, 
+                "DamageFlags": [
+                    "shooter"
+                ], 
+                "CollisionFlags": [ ], 
+                "Conditions": [ ], 
+                "InitialVelocity": [
+                    {
+                        "Min": -10, 
+                        "Max": -35
+                    }, 
+                    {
+                        "Min": -5, 
+                        "Max": 5
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 5
+                    }
+                ], 
+                "InitialAcceleration": [
+                    {
+                        "Min": 1, 
+                        "Max": 3
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": -1, 
+                        "Max": 1
+                    }
+                ], 
+                "InitialRotation": {
+                    "Min": 1.48, 
+                    "Max": 1.65
+                }, 
+                "InitialScale": {
+                    "Min": 5, 
+                    "Max": 10
+                }, 
+                "AttachedPAM": "POPANIM_EFFECTS_FROSTBITE_CHILL_WIND", 
+                "AttachedPAMAnimRigClass": "", 
+                "AttachedPAMOffset": {
+                    "x": -1050, 
+                    "y": -150
+                }, 
+                "AttachedPAMAnimationToPlay": [
+                    ""
+                ], 
+                "CollisionRect": {
+                    "mX": -15, 
+                    "mY": -15, 
+                    "mWidth": 30, 
+                    "mHeight": 30
+                }, 
+                "ImpactSoundEvent": "", 
+                "ImpactSoundThrottleTimer": 0.075, 
+                "ImpactPAM": "", 
+                "ImpactPAMAnimationToPlay": [
+                    ""
+                ], 
+                "ImpactOffset": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ]
+            }
+        }, 

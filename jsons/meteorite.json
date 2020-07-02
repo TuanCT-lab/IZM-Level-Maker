@@ -1,0 +1,445 @@
+{
+            "aliases": [
+                "BigMeteorSpawner"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(railcart_cowboy@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "", 
+                "ZombieSpawnWaitTime": "1", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(meteor_big@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "SmallMeteorSpawner"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(railcart_cowboy@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "", 
+                "ZombieSpawnWaitTime": "1", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(meteor_small@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "meteor_big"
+            ], 
+            "objdata": {
+                "TypeName": "iceage_hunter", 
+                "ZombieClass": "ZombieIceAgeHunter", 
+                "Properties": "RTID(ZombieMeteorBig@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieIceAgeHunterGroup", 
+                    "PlantFirePeashooter", 
+                    "FirePeaEffects", 
+                    "PlantCoconutCannon", 
+                    "PlantDandelion", 
+                    "PlantPepperpult", 
+                    "PlantPepperPultAudio", 
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AudioGroups": [
+                    "PlantCoconutCannonAudio", 
+                    "PlantFirePeaShooterAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_Hunter", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER", 
+                "HomeWorld": "iceage", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "objclass": "ZombieIceAgeHunterProps", 
+            "aliases": [
+                "ZombieMeteorBig"
+            ], 
+            "objdata": {
+                "Speed": 0, 
+                "Hitpoints": 268353535, 
+                "EatDPS": 100, 
+                "CanSpawnPlantFood": false, 
+                "ChillInsteadOfFreeze": true, 
+                "HasShadow": false, 
+                "CanBeFlicked": false, 
+                "CanSurrender": true, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "Actions": [
+                    "RTID(ZombieMeteorBigAction@CurrentLevel)"
+                ], 
+                "HitRect": {
+                    "mX": -10000, 
+                    "mY": 90000, 
+                    "mWidth": 0, 
+                    "mHeight": 0
+                }, 
+                "AttackRect": {
+                    "mX": 15, 
+                    "mY": 0, 
+                    "mWidth": 20, 
+                    "mHeight": 95
+                }, 
+                "NearAttackRange": 1, 
+                "FarAttackRange": 9999, 
+                "Cost": 25, 
+                "WavePointCost": 25, 
+                "Weight": 10, 
+                "SnowballsPerBarrage": 1, 
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "ShadowOffset": {
+                    "x": 10000, 
+                    "y": 0, 
+                    "z": 1.2
+                }, 
+                "GroundTrackName": "ground_swatch", 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed0"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieProjectileActionDefinition", 
+            "aliases": [
+                "ZombieMeteorBigAction"
+            ], 
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 3, 
+                    "Max": 4
+                }, 
+                "TimeBetween": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "TimeBetweenBarrages": {
+                    "Min": 14, 
+                    "Max": 18
+                }, 
+                "Projectile": "RTID(ZombieMeteorBigProjectile@CurrentLevel)", 
+                "ProjectileSound": "Play_Zomb_Egypt_Zomboss_Attack_Rush", 
+                "SpawnOffset": {
+                    "x": 0, 
+                    "y": -320, 
+                    "z": 500
+                }, 
+                "ApexHeight": 100, 
+                "TimeUntilHit": 0.75
+            }
+        }, 
+        {
+            "objclass": "ProjectilePropertySheet", 
+            "aliases": [
+                "ZombieMeteorBigProjectile"
+            ], 
+            "objdata": {
+                "BaseDamage": 9999, 
+                "SplashDamage": 100, 
+                "SplashRadius": 2.0736, 
+                "CollisionFlags": [
+                    "griditems", 
+                    "plants", 
+                    "ground", 
+                    "zombies", 
+                    "normal_plants", 
+                    "tall_plants"
+                ], 
+                "DamageFlags": [
+                    "lobbed", 
+                    "shooter"
+                ], 
+                "InitialVelocity": [
+                    {
+                        "Min": -128, 
+                        "Max": -2
+                    }, 
+                    {
+                        "Min": -35, 
+                        "Max": 45
+                    }, 
+                    {
+                        "Min": 600, 
+                        "Max": 700
+                    }
+                ], 
+                "InitialAcceleration": [
+                    {
+                        "Min": -1, 
+                        "Max": 1
+                    }, 
+                    {
+                        "Min": -1, 
+                        "Max": 1
+                    }, 
+                    {
+                        "Min": -350, 
+                        "Max": -300
+                    }
+                ], 
+                "InitialScale": {
+                    "Min": 3, 
+                    "Max": 3
+                }, 
+                "RotateToMatchVelocity": true, 
+                "AttachedPAM": "POPANIM_EFFECTS_T_FIRE_PEA", 
+                "AttachedPAMOffset": {
+                    "x": -112.5, 
+                    "y": -111.5
+                }, 
+                "AttachedPAMAnimationToPlay": [
+                    "animation"
+                ], 
+                "ImpactSoundEvent": "Play_PVZ_CoconutCannon_PF_Impact", 
+                "ImpactPAM": "POPANIM_EFFECTS_T_PEPPERPULT_PROJECTILE_SPLAT", 
+                "ImpactPAMAnimationToPlay": [
+                    "animation3"
+                ], 
+                "ImpactOffset": [
+                    {
+                        "Min": -30, 
+                        "Max": -10
+                    }, 
+                    {
+                        "Min": -15, 
+                        "Max": 5
+                    }
+                ], 
+                "CollisionRect": {
+                    "mX": -15, 
+                    "mY": -15, 
+                    "mWidth": 40, 
+                    "mHeight": 40
+                }
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "meteor_small"
+            ], 
+            "objdata": {
+                "TypeName": "iceage_hunter", 
+                "ZombieClass": "ZombieIceAgeHunter", 
+                "Properties": "RTID(ZombieMeteorSmall@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieIceAgeHunterGroup", 
+                    "PlantFirePeashooter", 
+                    "FirePeaEffects", 
+                    "PlantPeashooter", 
+                    "PeaEffects", 
+                    "PlantCoconutCannon", 
+                    "PlantDandelion", 
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AudioGroups": [
+                    "PlantFirePeaShooterAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_Hunter", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER", 
+                "HomeWorld": "iceage", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "objclass": "ZombieIceAgeHunterProps", 
+            "aliases": [
+                "ZombieMeteorSmall"
+            ], 
+            "objdata": {
+                "Speed": 0, 
+                "Hitpoints": 268353535, 
+                "EatDPS": 100, 
+                "CanSpawnPlantFood": true, 
+                "ChillInsteadOfFreeze": true, 
+                "CanSurrender": true, 
+                "HasShadow": false, 
+                "CanBeFlicked": false, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "Actions": [
+                    "RTID(ZombieMeteorSmallAction@CurrentLevel)"
+                ], 
+                "HitRect": {
+                    "mX": -1000, 
+                    "mY": 90000, 
+                    "mWidth": 0, 
+                    "mHeight": 0
+                }, 
+                "AttackRect": {
+                    "mX": 15, 
+                    "mY": 0, 
+                    "mWidth": 20, 
+                    "mHeight": 95
+                }, 
+                "NearAttackRange": 1, 
+                "FarAttackRange": 9999, 
+                "Cost": 25, 
+                "WavePointCost": 25, 
+                "Weight": 10, 
+                "SnowballsPerBarrage": 1, 
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "ShadowOffset": {
+                    "x": 10000, 
+                    "y": 0, 
+                    "z": 1.2
+                }, 
+                "GroundTrackName": "ground_swatch", 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed0"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieProjectileActionDefinition", 
+            "aliases": [
+                "ZombieMeteorSmallAction"
+            ], 
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 3, 
+                    "Max": 4
+                }, 
+                "TimeBetween": {
+                    "Min": 3, 
+                    "Max": 6
+                }, 
+                "TimeBetweenBarrages": {
+                    "Min": 3, 
+                    "Max": 6
+                }, 
+                "Projectile": "RTID(ZombieMeteorSmallProjectile@CurrentLevel)", 
+                "ProjectileSound": "Play_Zomb_Egypt_Zomboss_Attack_Rush", 
+                "SpawnOffset": {
+                    "x": 0, 
+                    "y": -320, 
+                    "z": 500
+                }, 
+                "ApexHeight": 100, 
+                "TimeUntilHit": 0.75
+            }
+        }, 
+        {
+            "objclass": "ProjectilePropertySheet", 
+            "aliases": [
+                "ZombieMeteorSmallProjectile"
+            ], 
+            "objdata": {
+                "BaseDamage": 10, 
+                "SplashDamage": 10, 
+                "SplashRadius": 2.0736, 
+                "CollisionFlags": [
+                    "griditems", 
+                    "plants", 
+                    "ground", 
+                    "zombies", 
+                    "normal_plants", 
+                    "tall_plants"
+                ], 
+                "DamageFlags": [
+                    "lobbed", 
+                    "shooter"
+                ], 
+                "InitialVelocity": [
+                    {
+                        "Min": -128, 
+                        "Max": -2
+                    }, 
+                    {
+                        "Min": -35, 
+                        "Max": 45
+                    }, 
+                    {
+                        "Min": 1000, 
+                        "Max": 1200
+                    }
+                ], 
+                "InitialAcceleration": [
+                    {
+                        "Min": -1, 
+                        "Max": 1
+                    }, 
+                    {
+                        "Min": -1, 
+                        "Max": 1
+                    }, 
+                    {
+                        "Min": -600, 
+                        "Max": -500
+                    }
+                ], 
+                "InitialScale": {
+                    "Min": 0.3, 
+                    "Max": 0.3
+                }, 
+                "InitialRotation": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "RotateToMatchVelocity": true, 
+                "AttachedPAM": "POPANIM_EFFECTS_T_FIRE_PEA", 
+                "AttachedPAMOffset": {
+                    "x": -112.5, 
+                    "y": -111.5
+                }, 
+                "AttachedPAMAnimationToPlay": [
+                    "animation3"
+                ], 
+                "ImpactSoundEvent": "Play_Splat", 
+                "ImpactPAM": "", 
+                "ImpactPAMAnimationToPlay": [
+                    ""
+                ], 
+                "ImpactOffset": [
+                    {
+                        "Min": -30, 
+                        "Max": -10
+                    }, 
+                    {
+                        "Min": -15, 
+                        "Max": 5
+                    }
+                ], 
+                "CollisionRect": {
+                    "mX": -5, 
+                    "mY": -5, 
+                    "mWidth": 20, 
+                    "mHeight": 20
+                }
+            }
+        }

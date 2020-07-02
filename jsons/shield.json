@@ -1,0 +1,107 @@
+{
+            "aliases": [
+                "ShieldEffect"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(gravestone_future@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "...", 
+                "SuppressActionIfNoGridItemsFound": false, 
+                "ZombieSpawnWaitTime": "1", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(shield@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "shield"
+            ], 
+            "objdata": {
+                "TypeName": "future_protector", 
+                "ZombieClass": "ZombieFutureProtector", 
+                "Properties": "RTID(ZombieShield@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieFutureProtectorGroup", 
+                    "EMPeachEffects"
+                ], 
+                "AudioGroups": [
+                    "ZombieFutureProtectorAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_FutureProtector", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_FUTURE_PROTECTOR", 
+                "HomeWorld": "future"
+            }
+        }, 
+        {
+            "aliases": [
+                "ZombieShield"
+            ], 
+            "objclass": "ZombieFutureProtectorProps", 
+            "objdata": {
+                "ArmDropFraction": -1, 
+                "ArtCenter": {
+                    "x": 100, 
+                    "y": 130
+                }, 
+                "AttackRect": {
+                    "mHeight": 125, 
+                    "mWidth": 20, 
+                    "mX": 15, 
+                    "mY": 0
+                }, 
+                "CanSpawnPlantFood": true, 
+                "Cost": 150, 
+                "EatDPS": 100, 
+                "ExplodesWhenMowed": false, 
+                "GroundTrackName": "ground_swatch", 
+                "HitRect": {
+                    "mHeight": 125, 
+                    "mWidth": 42, 
+                    "mX": 0, 
+                    "mY": 10
+                }, 
+                "Hitpoints": 268353535, 
+                "NormalDeathOnExplosion": true, 
+                "NormalDeathWhenMowed": true, 
+                "ShadowOffset": {
+                    "x": 0, 
+                    "y": 0, 
+                    "z": 1.2
+                }, 
+                "ShieldActivationColumn": 8, 
+                "ShieldCount": 1, 
+                "ShieldDiesUponLossOfControl": true, 
+                "ShieldHP": -1, 
+                "ShieldReactivationDelay": 0, 
+                "ShieldSizeX": 3, 
+                "ShieldSizeY": 18, 
+                "SkipHeadDropState": true, 
+                "SoundOnActivate": "Play_Zomb_Future_Protector_Activate", 
+                "SoundOnDeactivate": "Play_Zomb_Future_Protector_Deactivate", 
+                "SoundOnDeath": "Play_Zomb_Future_Protector_Die", 
+                "SoundOnEat": "Play_Zomb_Future_Protector_Eat", 
+                "SoundOnShieldActivate": "Play_Zomb_Future_Protector_Shield_Start", 
+                "SoundOnShieldDeactivate": "Play_Zomb_Future_Protector_Shield_Stop", 
+                "SoundOnWalk": "", 
+                "Speed": 0, 
+                "WavePointCost": 500, 
+                "Weight": 1500, 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness3"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed2"
+                    }
+                ]
+            }
+        }, 

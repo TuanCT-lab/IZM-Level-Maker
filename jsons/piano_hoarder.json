@@ -1,0 +1,77 @@
+{
+            "objclass": "ZombieType", 
+            "aliases": [
+                "piano_hoarder"
+            ], 
+            "objdata": {
+                "TypeName": "iceage_weaselhoarder", 
+                "ZombieClass": "ZombieWeaselHoarder", 
+                "Properties": "RTID(ZombiePianoHoarderDefault@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieIceageWeaselHoarderGroup", 
+                    "ZombieWestPianoHolidayGroup"
+                ], 
+                "AudioGroups": [
+                    "ZombieIceAgeWeaselHoarderAudio", 
+                    "ZombieCowboyPianoAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_WeaselHoarder", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_WEASELHOARDER", 
+                "HomeWorld": "iceage"
+            }
+        }, 
+        {
+            "aliases": [
+                "ZombiePianoHoarderDefault"
+            ], 
+            "objclass": "ZombieChickenFarmerProps", 
+            "objdata": {
+                "ArtCenter": {
+                    "x": 100, 
+                    "y": 130
+                }, 
+                "AttackRect": {
+                    "mHeight": 95, 
+                    "mWidth": 20, 
+                    "mX": 15, 
+                    "mY": 0
+                }, 
+                "CanSpawnPlantFood": true, 
+                "ChickenTypeName": "piano", 
+                "ChickeningDuration": 1, 
+                "ChickeningDurationVariance": 0, 
+                "ChickeningHealthPercentage": 0.6, 
+                "ChickeningInterval": 1.5, 
+                "ChickeningIntervalVariance": 0, 
+                "ChickeningSound": "Play_WeaselAction", 
+                "ChillInsteadOfFreeze": true, 
+                "Cost": 150, 
+                "EatDPS": 100, 
+                "GroundTrackName": "ground_swatch", 
+                "HitRect": {
+                    "mHeight": 95, 
+                    "mWidth": 32, 
+                    "mX": 10, 
+                    "mY": 10
+                }, 
+                "Hitpoints": 300, 
+                "ShadowOffset": {
+                    "x": 0, 
+                    "y": 0, 
+                    "z": 1.2
+                }, 
+                "Speed": 0.15, 
+                "WavePointCost": 350, 
+                "Weight": 3000, 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness2"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed2"
+                    }
+                ]
+            }
+        }, 

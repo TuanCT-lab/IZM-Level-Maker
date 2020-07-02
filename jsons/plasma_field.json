@@ -1,0 +1,767 @@
+{
+            "aliases": [
+                "BurningSpawn1"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(railcart_cowboy@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "", 
+                "ZombieSpawnWaitTime": "0", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(burningeffectlane1@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "BurningSpawn2"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(railcart_cowboy@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "", 
+                "ZombieSpawnWaitTime": "0", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(burningeffectlane2@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "BurningSpawn3"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(railcart_cowboy@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "", 
+                "ZombieSpawnWaitTime": "0", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(burningeffectlane3@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "BurningSpawn4"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(railcart_cowboy@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "", 
+                "ZombieSpawnWaitTime": "0", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(burningeffectlane4@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "BurningSpawn5"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(railcart_cowboy@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "", 
+                "ZombieSpawnWaitTime": "0", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(burningeffectlane5@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "burningeffectlane1"
+            ], 
+            "objdata": {
+                "TypeName": "iceage_hunter", 
+                "ZombieClass": "ZombieIceAgeHunter", 
+                "Properties": "RTID(ZombieBurningEffectLane1@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieIceAgeHunterGroup", 
+                    "PlantFirePeashooter", 
+                    "FirePeaEffects", 
+                    "PlantPepperpult", 
+                    "PlantPepperPultAudio", 
+                    "PlantCoconutCannon", 
+                    "PlantDandelion", 
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AudioGroups": [
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_Hunter", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER", 
+                "HomeWorld": "iceage", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "objclass": "ZombieIceAgeHunterProps", 
+            "aliases": [
+                "ZombieBurningEffectLane1"
+            ], 
+            "objdata": {
+                "Speed": 0.12, 
+                "Hitpoints": 1000, 
+                "EatDPS": 0, 
+                "CanSpawnPlantFood": false, 
+                "CanBeFlicked": false, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "ChillInsteadOfFreeze": true, 
+                "CanTriggerZombieWin": false, 
+                "CanSurrender": true, 
+                "HeadDropFraction": -1, 
+                "Actions": [
+                    "RTID(ZombieBurningEffectLane1Action@CurrentLevel)"
+                ], 
+                "HitRect": {
+                    "mHeight": 0, 
+                    "mWidth": 0, 
+                    "mX": 90000, 
+                    "mY": 90000
+                }, 
+                "AttackRect": {
+                    "mX": 90000, 
+                    "mY": 90000, 
+                    "mWidth": 0, 
+                    "mHeight": 0
+                }, 
+                "NearAttackRange": 0, 
+                "FarAttackRange": 20, 
+                "Cost": 10, 
+                "WavePointCost": 10, 
+                "Weight": 10, 
+                "SnowballsPerBarrage": 1, 
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "ShadowOffset": {
+                    "x": 0, 
+                    "y": 0, 
+                    "z": 0
+                }, 
+                "GroundTrackName": "ground_swatch", 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed0"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieProjectileActionDefinition", 
+            "aliases": [
+                "ZombieBurningEffectLane1Action"
+            ], 
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "TimeBetween": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "TimeBetweenBarrages": {
+                    "Min": 999999, 
+                    "Max": 999999
+                }, 
+                "Projectile": "RTID(ZombieBurningEffectProjectile@CurrentLevel)", 
+                "ProjectileSound": "Play_Zomb_Egypt_Zomboss_Attack_Rush", 
+                "SpawnOffset": {
+                    "x": 0, 
+                    "y": -448, 
+                    "z": 0
+                }, 
+                "ApexHeight": 100, 
+                "TimeUntilHit": 0.75
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "burningeffectlane2"
+            ], 
+            "objdata": {
+                "TypeName": "iceage_hunter", 
+                "ZombieClass": "ZombieIceAgeHunter", 
+                "Properties": "RTID(ZombieBurningEffectLane2@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieIceAgeHunterGroup", 
+                    "PlantFirePeashooter", 
+                    "FirePeaEffects", 
+                    "PlantPepperpult", 
+                    "PlantPepperPultAudio", 
+                    "PlantCoconutCannon", 
+                    "PlantDandelion", 
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AudioGroups": [
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_Hunter", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER", 
+                "HomeWorld": "iceage", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "objclass": "ZombieIceAgeHunterProps", 
+            "aliases": [
+                "ZombieBurningEffectLane2"
+            ], 
+            "objdata": {
+                "Speed": 0.12, 
+                "Hitpoints": 1000, 
+                "EatDPS": 0, 
+                "CanSpawnPlantFood": false, 
+                "CanBeFlicked": false, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "ChillInsteadOfFreeze": true, 
+                "CanTriggerZombieWin": false, 
+                "CanSurrender": true, 
+                "HeadDropFraction": -1, 
+                "Actions": [
+                    "RTID(ZombieBurningEffectLane2Action@CurrentLevel)"
+                ], 
+                "HitRect": {
+                    "mHeight": 0, 
+                    "mWidth": 0, 
+                    "mX": 90000, 
+                    "mY": 90000
+                }, 
+                "AttackRect": {
+                    "mX": 90000, 
+                    "mY": 90000, 
+                    "mWidth": 0, 
+                    "mHeight": 0
+                }, 
+                "NearAttackRange": 0, 
+                "FarAttackRange": 20, 
+                "Cost": 10, 
+                "WavePointCost": 10, 
+                "Weight": 10, 
+                "SnowballsPerBarrage": 1, 
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "ShadowOffset": {
+                    "x": 0, 
+                    "y": 0, 
+                    "z": 0
+                }, 
+                "GroundTrackName": "ground_swatch", 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed0"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieProjectileActionDefinition", 
+            "aliases": [
+                "ZombieBurningEffectLane2Action"
+            ], 
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "TimeBetween": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "TimeBetweenBarrages": {
+                    "Min": 999999, 
+                    "Max": 999999
+                }, 
+                "Projectile": "RTID(ZombieBurningEffectProjectile@CurrentLevel)", 
+                "ProjectileSound": "Play_Zomb_Egypt_Zomboss_Attack_Rush", 
+                "SpawnOffset": {
+                    "x": 0, 
+                    "y": -384, 
+                    "z": 0
+                }, 
+                "ApexHeight": 100, 
+                "TimeUntilHit": 0.75
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "burningeffectlane3"
+            ], 
+            "objdata": {
+                "TypeName": "iceage_hunter", 
+                "ZombieClass": "ZombieIceAgeHunter", 
+                "Properties": "RTID(ZombieBurningEffectLane3@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieIceAgeHunterGroup", 
+                    "PlantFirePeashooter", 
+                    "FirePeaEffects", 
+                    "PlantPepperpult", 
+                    "PlantPepperPultAudio", 
+                    "PlantCoconutCannon", 
+                    "PlantDandelion", 
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AudioGroups": [
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_Hunter", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER", 
+                "HomeWorld": "iceage", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "objclass": "ZombieIceAgeHunterProps", 
+            "aliases": [
+                "ZombieBurningEffectLane3"
+            ], 
+            "objdata": {
+                "Speed": 0.12, 
+                "Hitpoints": 1000, 
+                "EatDPS": 0, 
+                "CanSpawnPlantFood": false, 
+                "CanBeFlicked": false, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "ChillInsteadOfFreeze": true, 
+                "CanTriggerZombieWin": false, 
+                "CanSurrender": true, 
+                "HeadDropFraction": -1, 
+                "Actions": [
+                    "RTID(ZombieBurningEffectLane3Action@CurrentLevel)"
+                ], 
+                "HitRect": {
+                    "mHeight": 0, 
+                    "mWidth": 0, 
+                    "mX": 90000, 
+                    "mY": 90000
+                }, 
+                "AttackRect": {
+                    "mX": 90000, 
+                    "mY": 90000, 
+                    "mWidth": 0, 
+                    "mHeight": 0
+                }, 
+                "NearAttackRange": 0, 
+                "FarAttackRange": 20, 
+                "Cost": 10, 
+                "WavePointCost": 10, 
+                "Weight": 10, 
+                "SnowballsPerBarrage": 1, 
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "ShadowOffset": {
+                    "x": 0, 
+                    "y": 0, 
+                    "z": 0
+                }, 
+                "GroundTrackName": "ground_swatch", 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed0"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieProjectileActionDefinition", 
+            "aliases": [
+                "ZombieBurningEffectLane3Action"
+            ], 
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "TimeBetween": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "TimeBetweenBarrages": {
+                    "Min": 999999, 
+                    "Max": 999999
+                }, 
+                "Projectile": "RTID(ZombieBurningEffectProjectile@CurrentLevel)", 
+                "ProjectileSound": "Play_Zomb_Egypt_Zomboss_Attack_Rush", 
+                "SpawnOffset": {
+                    "x": 0, 
+                    "y": -320, 
+                    "z": 0
+                }, 
+                "ApexHeight": 100, 
+                "TimeUntilHit": 0.75
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "burningeffectlane4"
+            ], 
+            "objdata": {
+                "TypeName": "iceage_hunter", 
+                "ZombieClass": "ZombieIceAgeHunter", 
+                "Properties": "RTID(ZombieBurningEffectLane4@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieIceAgeHunterGroup", 
+                    "PlantFirePeashooter", 
+                    "FirePeaEffects", 
+                    "PlantPepperpult", 
+                    "PlantPepperPultAudio", 
+                    "PlantCoconutCannon", 
+                    "PlantDandelion", 
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AudioGroups": [
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_Hunter", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER", 
+                "HomeWorld": "iceage", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "objclass": "ZombieIceAgeHunterProps", 
+            "aliases": [
+                "ZombieBurningEffectLane4"
+            ], 
+            "objdata": {
+                "Speed": 0.12, 
+                "Hitpoints": 1000, 
+                "EatDPS": 0, 
+                "CanSpawnPlantFood": false, 
+                "CanBeFlicked": false, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "ChillInsteadOfFreeze": true, 
+                "CanTriggerZombieWin": false, 
+                "CanSurrender": true, 
+                "HeadDropFraction": -1, 
+                "Actions": [
+                    "RTID(ZombieBurningEffectLane4Action@CurrentLevel)"
+                ], 
+                "HitRect": {
+                    "mHeight": 0, 
+                    "mWidth": 0, 
+                    "mX": 90000, 
+                    "mY": 90000
+                }, 
+                "AttackRect": {
+                    "mX": 90000, 
+                    "mY": 90000, 
+                    "mWidth": 0, 
+                    "mHeight": 0
+                }, 
+                "NearAttackRange": 0, 
+                "FarAttackRange": 20, 
+                "Cost": 10, 
+                "WavePointCost": 10, 
+                "Weight": 10, 
+                "SnowballsPerBarrage": 1, 
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "ShadowOffset": {
+                    "x": 0, 
+                    "y": 0, 
+                    "z": 0
+                }, 
+                "GroundTrackName": "ground_swatch", 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed0"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieProjectileActionDefinition", 
+            "aliases": [
+                "ZombieBurningEffectLane4Action"
+            ], 
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "TimeBetween": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "TimeBetweenBarrages": {
+                    "Min": 999999, 
+                    "Max": 999999
+                }, 
+                "Projectile": "RTID(ZombieBurningEffectProjectile@CurrentLevel)", 
+                "ProjectileSound": "Play_Zomb_Egypt_Zomboss_Attack_Rush", 
+                "SpawnOffset": {
+                    "x": 0, 
+                    "y": -256, 
+                    "z": 0
+                }, 
+                "ApexHeight": 100, 
+                "TimeUntilHit": 0.75
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "burningeffectlane5"
+            ], 
+            "objdata": {
+                "TypeName": "iceage_hunter", 
+                "ZombieClass": "ZombieIceAgeHunter", 
+                "Properties": "RTID(ZombieBurningEffectLane5@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieIceAgeHunterGroup", 
+                    "PlantFirePeashooter", 
+                    "FirePeaEffects", 
+                    "PlantPepperpult", 
+                    "PlantPepperPultAudio", 
+                    "PlantCoconutCannon", 
+                    "PlantDandelion", 
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AudioGroups": [
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_Hunter", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER", 
+                "HomeWorld": "iceage", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "objclass": "ZombieIceAgeHunterProps", 
+            "aliases": [
+                "ZombieBurningEffectLane5"
+            ], 
+            "objdata": {
+                "Speed": 0.12, 
+                "Hitpoints": 1000, 
+                "EatDPS": 0, 
+                "CanSpawnPlantFood": false, 
+                "CanBeFlicked": false, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "ChillInsteadOfFreeze": true, 
+                "CanTriggerZombieWin": false, 
+                "CanSurrender": true, 
+                "HeadDropFraction": -1, 
+                "Actions": [
+                    "RTID(ZombieBurningEffectLane5Action@CurrentLevel)"
+                ], 
+                "HitRect": {
+                    "mHeight": 0, 
+                    "mWidth": 0, 
+                    "mX": 90000, 
+                    "mY": 90000
+                }, 
+                "AttackRect": {
+                    "mX": 90000, 
+                    "mY": 90000, 
+                    "mWidth": 0, 
+                    "mHeight": 0
+                }, 
+                "NearAttackRange": 0, 
+                "FarAttackRange": 20, 
+                "Cost": 10, 
+                "WavePointCost": 10, 
+                "Weight": 10, 
+                "SnowballsPerBarrage": 1, 
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "ShadowOffset": {
+                    "x": 0, 
+                    "y": 0, 
+                    "z": 0
+                }, 
+                "GroundTrackName": "ground_swatch", 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed0"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieProjectileActionDefinition", 
+            "aliases": [
+                "ZombieBurningEffectLane5Action"
+            ], 
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "TimeBetween": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "TimeBetweenBarrages": {
+                    "Min": 999999, 
+                    "Max": 999999
+                }, 
+                "Projectile": "RTID(ZombieBurningEffectProjectile@CurrentLevel)", 
+                "ProjectileSound": "Play_Zomb_Egypt_Zomboss_Attack_Rush", 
+                "SpawnOffset": {
+                    "x": 0, 
+                    "y": -192, 
+                    "z": 0
+                }, 
+                "ApexHeight": 100, 
+                "TimeUntilHit": 0.75
+            }
+        }, 
+        {
+            "objclass": "ProjectilePropertySheet", 
+            "aliases": [
+                "ZombieBurningEffectProjectile"
+            ], 
+            "objdata": {
+                "BaseDamage": 0.047619, 
+                "HasShadow": false, 
+                "DiesOnImpact": false, 
+                "CollisionFlags": [
+                    "griditems", 
+                    "zombies", 
+                    "ground_zombies", 
+                    "ground_plants", 
+                    "off_ground_zombies", 
+                    "normal_plants", 
+                    "tall_plants"
+                ], 
+                "DamageFlags": [
+                    "fire", 
+                    "shooter"
+                ], 
+                "InitialVelocity": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ], 
+                "InitialAcceleration": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ], 
+                "InitialRotation": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "InitialAngularVelocity": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "InitialScale": {
+                    "Min": 1000000000, 
+                    "Max": 1000000000
+                }, 
+                "AttachedPAM": "", 
+                "AttachedPAMOffset": { }, 
+                "AttachedPAMAnimationToPlay": [ ], 
+                "CollisionRect": {
+                    "mX": -332.7, 
+                    "mY": -12.7, 
+                    "mWidth": 10000, 
+                    "mHeight": 25.4
+                }, 
+                "ImpactSoundEvent": "", 
+                "ImpactSoundThrottleTimer": 0.075, 
+                "ImpactPAM": "", 
+                "ImpactPAMAnimationToPlay": [ ], 
+                "ImpactOffset": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ]
+            }
+        }, 

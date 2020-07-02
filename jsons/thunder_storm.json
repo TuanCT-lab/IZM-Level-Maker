@@ -1,0 +1,1260 @@
+{
+            "aliases": [
+                "RainTileSpawn1"
+            ], 
+            "objclass": "SpawnGravestonesWaveActionProps", 
+            "objdata": {
+                "GravestonePool": [
+                    {
+                        "Count": 8, 
+                        "Type": "RTID(raintile1@CurrentLevel)"
+                    }
+                ], 
+                "SpawnEffectAnimID": "", 
+                "SpawnPositionsPool": [
+                    {
+                        "mX": 0, 
+                        "mY": 5
+                    }, 
+                    {
+                        "mX": 1, 
+                        "mY": 5
+                    }, 
+                    {
+                        "mX": 2, 
+                        "mY": 5
+                    }, 
+                    {
+                        "mX": 3, 
+                        "mY": 5
+                    }, 
+                    {
+                        "mX": 4, 
+                        "mY": 5
+                    }, 
+                    {
+                        "mX": 5, 
+                        "mY": 5
+                    }, 
+                    {
+                        "mX": 6, 
+                        "mY": 5
+                    }, 
+                    {
+                        "mX": 7, 
+                        "mY": 5
+                    }
+                ], 
+                "SpawnSoundID": ""
+            }
+        }, 
+        {
+            "aliases": [
+                "RainTileSpawn2"
+            ], 
+            "objclass": "SpawnGravestonesWaveActionProps", 
+            "objdata": {
+                "GravestonePool": [
+                    {
+                        "Count": 2, 
+                        "Type": "RTID(raintile2@CurrentLevel)"
+                    }
+                ], 
+                "SpawnEffectAnimID": "", 
+                "SpawnPositionsPool": [
+                    {
+                        "mX": 2, 
+                        "mY": 5
+                    }, 
+                    {
+                        "mX": 0, 
+                        "mY": 5
+                    }
+                ], 
+                "SpawnSoundID": ""
+            }
+        }, 
+        {
+            "aliases": [
+                "RainTileSpawn3"
+            ], 
+            "objclass": "SpawnGravestonesWaveActionProps", 
+            "objdata": {
+                "GravestonePool": [
+                    {
+                        "Count": 1, 
+                        "Type": "RTID(raintile3@CurrentLevel)"
+                    }
+                ], 
+                "SpawnEffectAnimID": "", 
+                "SpawnPositionsPool": [
+                    {
+                        "mX": 3, 
+                        "mY": 5
+                    }
+                ], 
+                "SpawnSoundID": ""
+            }
+        }, 
+        {
+            "aliases": [
+                "RainTileSpawn4"
+            ], 
+            "objclass": "SpawnGravestonesWaveActionProps", 
+            "objdata": {
+                "GravestonePool": [
+                    {
+                        "Count": 1, 
+                        "Type": "RTID(raintile4@CurrentLevel)"
+                    }
+                ], 
+                "SpawnEffectAnimID": "", 
+                "SpawnPositionsPool": [
+                    {
+                        "mX": 4, 
+                        "mY": 5
+                    }
+                ], 
+                "SpawnSoundID": ""
+            }
+        }, 
+        {
+            "aliases": [
+                "RainTileSpawn5"
+            ], 
+            "objclass": "SpawnGravestonesWaveActionProps", 
+            "objdata": {
+                "GravestonePool": [
+                    {
+                        "Count": 2, 
+                        "Type": "RTID(raintile5@CurrentLevel)"
+                    }
+                ], 
+                "SpawnEffectAnimID": "", 
+                "SpawnPositionsPool": [
+                    {
+                        "mX": 2, 
+                        "mY": 5
+                    }, 
+                    {
+                        "mX": 0, 
+                        "mY": 5
+                    }
+                ], 
+                "SpawnSoundID": ""
+            }
+        }, 
+        {
+            "aliases": [
+                "WindTileSpawn"
+            ], 
+            "objclass": "SpawnGravestonesWaveActionProps", 
+            "objdata": {
+                "GravestonePool": [
+                    {
+                        "Count": 1, 
+                        "Type": "RTID(windtile@CurrentLevel)"
+                    }
+                ], 
+                "SpawnEffectAnimID": "", 
+                "SpawnPositionsPool": [
+                    {
+                        "mX": 5, 
+                        "mY": 5
+                    }
+                ], 
+                "SpawnSoundID": ""
+            }
+        }, 
+        {
+            "aliases": [
+                "RainTrigger"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(slider_up@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "", 
+                "SuppressActionIfNoGridItemsFound": false, 
+                "ZombieSpawnWaitTime": "8", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(activation@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "FlashEffect"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(slider_up@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "", 
+                "SuppressActionIfNoGridItemsFound": false, 
+                "ZombieSpawnWaitTime": "1", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(flash@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "ShadowEffect"
+            ], 
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps", 
+            "objdata": {
+                "AdditionalPlantfood": "0", 
+                "GridTypes": [
+                    "RTID(crater@GridItemTypes)"
+                ], 
+                "WaveStartMessage": "", 
+                "SuppressActionIfNoGridItemsFound": false, 
+                "ZombieSpawnWaitTime": "0", 
+                "Zombies": [
+                    {
+                        "Type": "RTID(shadow@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "Timer"
+            ], 
+            "objclass": "SpawnZombiesFromGroundSpawnerProps", 
+            "objdata": {
+                "ColumnStart": 10, 
+                "ColumnEnd": 11, 
+                "Zombies": [
+                    {
+                        "Row": "3", 
+                        "Type": "RTID(timer@CurrentLevel)"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "GridItemType", 
+            "aliases": [
+                "raintile1"
+            ], 
+            "objdata": {
+                "TypeName": "boulder_trap_falling_forward", 
+                "GridItemClass": "GridItemProjectileTrap", 
+                "Properties": "RTID(RainTileProp1@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieBeachOctopusGroup", 
+                    "ZombieLostCityZombossGroup", 
+                    "BoulderTrapTileGroup", 
+                    "PlantMissileToe", 
+                    "PlantSnowPea", 
+                    "PlantSnowPeaAudio"
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "RainTileProp1"
+            ], 
+            "objclass": "GridItemProjectileTrapProps", 
+            "objdata": {
+                "Height": "ground", 
+                "PopAnim": "POPANIM_EFFECTS_ZOMBIE_OCTOPUS_PROJECTILE", 
+                "PopAnimRenderOffset": {
+                    "x": 10000, 
+                    "y": 10000
+                }, 
+                "PopAnimRigClass": "EffectAnimRig_SwitchTile", 
+                "ProjectileFireOriginOffset": {
+                    "x": 64, 
+                    "y": -512, 
+                    "z": 500
+                }, 
+                "ProjectileTypeToSpawn": "RTID(RainProjectile@CurrentLevel)", 
+                "TileBaseAnimation": "bouldertile", 
+                "TimeBetweenTriggersInSeconds": 0.01, 
+                "TriggerRect": {
+                    "mHeight": 60, 
+                    "mWidth": 2000, 
+                    "mX": -1000, 
+                    "mY": -119
+                }, 
+                "TriggeringEntityTypes": [
+                    "zombie"
+                ]
+            }
+        }, 
+        {
+            "objclass": "GridItemType", 
+            "aliases": [
+                "raintile2"
+            ], 
+            "objdata": {
+                "TypeName": "boulder_trap_falling_forward", 
+                "GridItemClass": "GridItemProjectileTrap", 
+                "Properties": "RTID(RainTileProp2@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieBeachOctopusGroup", 
+                    "ZombieLostCityZombossGroup", 
+                    "BoulderTrapTileGroup", 
+                    "PlantSnowPea", 
+                    "PlantSnowPeaAudio"
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "RainTileProp2"
+            ], 
+            "objclass": "GridItemProjectileTrapProps", 
+            "objdata": {
+                "Height": "ground", 
+                "PopAnim": "POPANIM_EFFECTS_ZOMBIE_OCTOPUS_PROJECTILE", 
+                "PopAnimRenderOffset": {
+                    "x": 10000, 
+                    "y": 10000
+                }, 
+                "PopAnimRigClass": "EffectAnimRig_SwitchTile", 
+                "ProjectileFireOriginOffset": {
+                    "x": 448, 
+                    "y": -512, 
+                    "z": 500
+                }, 
+                "ProjectileTypeToSpawn": "RTID(RainSplash1Projectile@CurrentLevel)", 
+                "TileBaseAnimation": "bouldertile", 
+                "TimeBetweenTriggersInSeconds": 0.01, 
+                "TriggerRect": {
+                    "mHeight": 60, 
+                    "mWidth": 2000, 
+                    "mX": -1000, 
+                    "mY": -119
+                }, 
+                "TriggeringEntityTypes": [
+                    "zombie"
+                ]
+            }
+        }, 
+        {
+            "objclass": "GridItemType", 
+            "aliases": [
+                "raintile3"
+            ], 
+            "objdata": {
+                "TypeName": "boulder_trap_falling_forward", 
+                "GridItemClass": "GridItemProjectileTrap", 
+                "Properties": "RTID(RainTileProp3@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieBeachOctopusGroup", 
+                    "ZombieLostCityZombossGroup", 
+                    "BoulderTrapTileGroup", 
+                    "PlantMissileToe", 
+                    "PlantSnowPea", 
+                    "PlantSnowPeaAudio"
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "RainTileProp3"
+            ], 
+            "objclass": "GridItemProjectileTrapProps", 
+            "objdata": {
+                "Height": "ground", 
+                "PopAnim": "POPANIM_EFFECTS_ZOMBIE_OCTOPUS_PROJECTILE", 
+                "PopAnimRenderOffset": {
+                    "x": 10000, 
+                    "y": 10000
+                }, 
+                "PopAnimRigClass": "EffectAnimRig_SwitchTile", 
+                "ProjectileFireOriginOffset": {
+                    "x": 420, 
+                    "y": -512, 
+                    "z": 500
+                }, 
+                "ProjectileTypeToSpawn": "RTID(RainProjectile@CurrentLevel)", 
+                "TileBaseAnimation": "bouldertile", 
+                "TimeBetweenTriggersInSeconds": 0.01, 
+                "TriggerRect": {
+                    "mHeight": 60, 
+                    "mWidth": 2000, 
+                    "mX": -1000, 
+                    "mY": -119
+                }, 
+                "TriggeringEntityTypes": [
+                    "zombie"
+                ]
+            }
+        }, 
+        {
+            "objclass": "GridItemType", 
+            "aliases": [
+                "raintile4"
+            ], 
+            "objdata": {
+                "TypeName": "boulder_trap_falling_forward", 
+                "GridItemClass": "GridItemProjectileTrap", 
+                "Properties": "RTID(RainTileProp4@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieBeachOctopusGroup", 
+                    "ZombieLostCityZombossGroup", 
+                    "BoulderTrapTileGroup", 
+                    "PlantMissileToe", 
+                    "PlantSnowPea", 
+                    "PlantSnowPeaAudio"
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "RainTileProp4"
+            ], 
+            "objclass": "GridItemProjectileTrapProps", 
+            "objdata": {
+                "Height": "ground", 
+                "PopAnim": "POPANIM_EFFECTS_ZOMBIE_OCTOPUS_PROJECTILE", 
+                "PopAnimRenderOffset": {
+                    "x": 10000, 
+                    "y": 10000
+                }, 
+                "PopAnimRigClass": "EffectAnimRig_SwitchTile", 
+                "ProjectileFireOriginOffset": {
+                    "x": 356, 
+                    "y": -320, 
+                    "z": 500
+                }, 
+                "ProjectileTypeToSpawn": "RTID(RainProjectile@CurrentLevel)", 
+                "TileBaseAnimation": "bouldertile", 
+                "TimeBetweenTriggersInSeconds": 0.01, 
+                "TriggerRect": {
+                    "mHeight": 60, 
+                    "mWidth": 2000, 
+                    "mX": -1000, 
+                    "mY": -119
+                }, 
+                "TriggeringEntityTypes": [
+                    "zombie"
+                ]
+            }
+        }, 
+        {
+            "objclass": "GridItemType", 
+            "aliases": [
+                "raintile5"
+            ], 
+            "objdata": {
+                "TypeName": "boulder_trap_falling_forward", 
+                "GridItemClass": "GridItemProjectileTrap", 
+                "Properties": "RTID(RainTileProp5@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieBeachOctopusGroup", 
+                    "ZombieLostCityZombossGroup", 
+                    "BoulderTrapTileGroup", 
+                    "PlantMissileToe", 
+                    "PlantMissileToeAudio"
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "RainTileProp5"
+            ], 
+            "objclass": "GridItemProjectileTrapProps", 
+            "objdata": {
+                "Height": "ground", 
+                "PopAnim": "POPANIM_EFFECTS_ZOMBIE_OCTOPUS_PROJECTILE", 
+                "PopAnimRenderOffset": {
+                    "x": 10000, 
+                    "y": 10000
+                }, 
+                "PopAnimRigClass": "EffectAnimRig_SwitchTile", 
+                "ProjectileFireOriginOffset": {
+                    "x": 448, 
+                    "y": -512, 
+                    "z": 500
+                }, 
+                "ProjectileTypeToSpawn": "RTID(RainSplash2Projectile@CurrentLevel)", 
+                "TileBaseAnimation": "bouldertile", 
+                "TimeBetweenTriggersInSeconds": 0.2, 
+                "TriggerRect": {
+                    "mHeight": 60, 
+                    "mWidth": 2000, 
+                    "mX": -1000, 
+                    "mY": -119
+                }, 
+                "TriggeringEntityTypes": [
+                    "zombie"
+                ]
+            }
+        }, 
+        {
+            "objclass": "ProjectilePropertySheet", 
+            "aliases": [
+                "RainProjectile"
+            ], 
+            "objdata": {
+                "BaseDamage": 0.14999, 
+                "DiesOnImpact": true, 
+                "CollisionFlags": [
+                    "ground", 
+                    "griditems", 
+                    "ground_zombies", 
+                    "off_ground_zombies"
+                ], 
+                "DamageFlags": [
+                    "shooter"
+                ], 
+                "InitialVelocity": [
+                    {
+                        "Min": -100, 
+                        "Max": -200
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 512
+                    }, 
+                    {
+                        "Min": -400, 
+                        "Max": -600
+                    }
+                ], 
+                "InitialScale": {
+                    "Min": 0.225, 
+                    "Max": 0.3
+                }, 
+                "InitialRotation": {
+                    "Min": 5.97, 
+                    "Max": 6.07
+                }, 
+                "AttachedPAMAnimationToPlay": [
+                    "animation1", 
+                    "animation2", 
+                    "animation3"
+                ], 
+                "AttachedPAM": "POPANIM_EFFECTS_T_MISSILE_TOE_PROJECTILE", 
+                "AttachedPAMOffset": {
+                    "x": -29.5, 
+                    "y": -15
+                }, 
+                "CollisionRect": {
+                    "mX": -15, 
+                    "mY": -15, 
+                    "mWidth": 30, 
+                    "mHeight": 30
+                }, 
+                "ImpactOffset": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ProjectilePropertySheet", 
+            "aliases": [
+                "RainSplash1Projectile"
+            ], 
+            "objdata": {
+                "BaseDamage": 0, 
+                "DiesOnImpact": true, 
+                "CollisionFlags": [
+                    "ground", 
+                    "griditems", 
+                    "normal_plants", 
+                    "tall_plants", 
+                    "plants", 
+                    "ground_zombies", 
+                    "off_ground_zombies"
+                ], 
+                "DamageFlags": [
+                    "shooter"
+                ], 
+                "InitialVelocity": [
+                    {
+                        "Min": 0, 
+                        "Max": -600
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 512
+                    }, 
+                    {
+                        "Min": -400, 
+                        "Max": -600
+                    }
+                ], 
+                "InitialScale": {
+                    "Min": 0.05, 
+                    "Max": 0.1
+                }, 
+                "InitialRotation": {
+                    "Min": 4.4, 
+                    "Max": 4.5
+                }, 
+                "AttachedPAM": "POPANIM_EFFECTS_T_SNOW_PEA", 
+                "AttachedPAMOffset": {
+                    "x": -29.5, 
+                    "y": -15
+                }, 
+                "AttachedPAMAnimationToPlay": [
+                    "animation2"
+                ], 
+                "CollisionRect": {
+                    "mX": -15, 
+                    "mY": -15, 
+                    "mWidth": 30, 
+                    "mHeight": 30
+                }, 
+                "ImpactSoundEvent": "Play_Splat", 
+                "ImpactSoundThrottleTimer": 0.075, 
+                "ImpactPAM": "POPANIM_EFFECTS_T_SPLAT_SNOW_PEA", 
+                "ImpactPAMAnimationToPlay": [
+                    "animation"
+                ], 
+                "ImpactOffset": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ProjectilePropertySheet", 
+            "aliases": [
+                "RainSplash2Projectile"
+            ], 
+            "objdata": {
+                "BaseDamage": 0, 
+                "DiesOnImpact": true, 
+                "CollisionFlags": [
+                    "ground"
+                ], 
+                "DamageFlags": [
+                    "shooter"
+                ], 
+                "InitialVelocity": [
+                    {
+                        "Min": 0, 
+                        "Max": -600
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 512
+                    }, 
+                    {
+                        "Min": -400, 
+                        "Max": -600
+                    }
+                ], 
+                "InitialScale": {
+                    "Min": 0.01, 
+                    "Max": 0.02
+                }, 
+                "InitialRotation": {
+                    "Min": 4.4, 
+                    "Max": 4.5
+                }, 
+                "CollisionRect": {
+                    "mX": -15, 
+                    "mY": -15, 
+                    "mWidth": 30, 
+                    "mHeight": 30
+                }, 
+                "ImpactSoundEvent": "", 
+                "ImpactSoundThrottleTimer": 0.075, 
+                "ImpactPAM": "POPANIM_EFFECTS_T_MISSILE_TOE_PROJECTILE", 
+                "ImpactPAMAnimationToPlay": [
+                    "animation4"
+                ], 
+                "ImpactOffset": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "GridItemType", 
+            "aliases": [
+                "windtile"
+            ], 
+            "objdata": {
+                "TypeName": "boulder_trap_falling_forward", 
+                "GridItemClass": "GridItemProjectileTrap", 
+                "Properties": "RTID(WindTileProp@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieBeachOctopusGroup", 
+                    "IceAgeFrostWindGroup", 
+                    "FrostbiteIceBlockPlantGroup", 
+                    "FrostbiteIceBlockZombieGroup", 
+                    "ZombieLostCityZombossGroup", 
+                    "BoulderTrapTileGroup"
+                ]
+            }
+        }, 
+        {
+            "aliases": [
+                "WindTileProp"
+            ], 
+            "objclass": "GridItemProjectileTrapProps", 
+            "objdata": {
+                "Height": "ground", 
+                "PopAnim": "POPANIM_EFFECTS_ZOMBIE_OCTOPUS_PROJECTILE", 
+                "PopAnimRenderOffset": {
+                    "x": 10000, 
+                    "y": 10000
+                }, 
+                "PopAnimRigClass": "EffectAnimRig_SwitchTile", 
+                "ProjectileFireOriginOffset": {
+                    "x": -224, 
+                    "y": -256, 
+                    "z": 100
+                }, 
+                "ProjectileTypeToSpawn": "RTID(WindProjectile@CurrentLevel)", 
+                "TileBaseAnimation": "bouldertile", 
+                "TimeBetweenTriggersInSeconds": 15, 
+                "TriggerRect": {
+                    "mHeight": 60, 
+                    "mWidth": 1000, 
+                    "mX": -500, 
+                    "mY": -119
+                }, 
+                "TriggeringEntityTypes": [
+                    "zombie"
+                ]
+            }
+        }, 
+        {
+            "objclass": "BoulderProjectileProps", 
+            "aliases": [
+                "WindProjectile"
+            ], 
+            "objdata": {
+                "ClassName": "BoulderProjectile", 
+                "BaseDamage": 99999, 
+                "HasShadow": false, 
+                "DiesOnImpact": false, 
+                "CollisionFlags": [
+                    "normal_plants", 
+                    "tall_plants", 
+                    "plants", 
+                    "ground"
+                ], 
+                "DamageFlags": [
+                    "rolling", 
+                    "bypass_shield"
+                ], 
+                "InitialVelocity": [
+                    {
+                        "Min": -19.2, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": -80, 
+                        "Max": 80
+                    }, 
+                    {
+                        "Min": -20, 
+                        "Max": -20
+                    }
+                ], 
+                "InitialAcceleration": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ], 
+                "InitialScale": {
+                    "Min": 0.5, 
+                    "Max": 0.5
+                }, 
+                "BounceElasticity": 0.3, 
+                "BounceThreshold": 0.005, 
+                "RollingVelocity": {
+                    "x": -200, 
+                    "y": 0, 
+                    "z": 20
+                }, 
+                "AttachedPAM": "", 
+                "AttachedPAMOffset": {
+                    "x": -150, 
+                    "y": -130
+                }, 
+                "AttachedPAMAnimationToPlay": [
+                    ""
+                ], 
+                "CollisionRect": {
+                    "mX": -20, 
+                    "mY": -20, 
+                    "mWidth": 5, 
+                    "mHeight": 5
+                }
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "timer"
+            ], 
+            "objdata": {
+                "TypeName": "tutorial", 
+                "ZombieClass": "ZombieBasic", 
+                "Properties": "RTID(ZombieTimer@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieTutorialGroup"
+                ], 
+                "AudioGroups": [ ], 
+                "AnimRigClass": "ZombieAnimRig_Tutorial", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_TUTORIAL", 
+                "HomeWorld": "modern", 
+                "IsBasicZombie": true
+            }
+        }, 
+        {
+            "aliases": [
+                "ZombieTimer"
+            ], 
+            "objclass": "ZombiePropertySheet", 
+            "objdata": {
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "AttackRect": {
+                    "mHeight": 0, 
+                    "mWidth": 0, 
+                    "mX": -90000, 
+                    "mY": -90000
+                }, 
+                "HeadDropFraction": 0, 
+                "SkipHeadDropState": true, 
+                "PowerUpDamageModifier": 0.01, 
+                "CanTriggerZombieWin": false, 
+                "CanSpawnPlantFood": false, 
+                "ChillInsteadOfFreeze": true, 
+                "HasShadow": false, 
+                "CanBeFlicked": false, 
+                "CanSurrender": true, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "Cost": 150, 
+                "EatDPS": 0, 
+                "GroundTrackName": "ground_swatch", 
+                "HitRect": {
+                    "mHeight": 0, 
+                    "mWidth": 0, 
+                    "mX": -90000, 
+                    "mY": -90000
+                }, 
+                "Hitpoints": 268353535, 
+                "ShadowOffset": {
+                    "x": 0, 
+                    "y": 0, 
+                    "z": 0
+                }, 
+                "Speed": 2, 
+                "WavePointCost": 100, 
+                "Weight": 1000, 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness1"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed2"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "activation"
+            ], 
+            "objdata": {
+                "TypeName": "tutorial", 
+                "ZombieClass": "ZombieBasic", 
+                "Properties": "RTID(ZombieActivation@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieTutorialGroup"
+                ], 
+                "AudioGroups": [ ], 
+                "AnimRigClass": "ZombieAnimRig_Tutorial", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_TUTORIAL", 
+                "HomeWorld": "modern", 
+                "IsBasicZombie": true
+            }
+        }, 
+        {
+            "aliases": [
+                "ZombieActivation"
+            ], 
+            "objclass": "ZombiePropertySheet", 
+            "objdata": {
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "AttackRect": {
+                    "mHeight": 95, 
+                    "mWidth": 100, 
+                    "mX": 970, 
+                    "mY": 0
+                }, 
+                "HeadDropFraction": 0, 
+                "SkipHeadDropState": true, 
+                "PowerUpDamageModifier": 0.01, 
+                "CanTriggerZombieWin": false, 
+                "CanSpawnPlantFood": false, 
+                "ChillInsteadOfFreeze": true, 
+                "HasShadow": false, 
+                "CanBeFlicked": false, 
+                "CanSurrender": true, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "Cost": 150, 
+                "EatDPS": 0, 
+                "GroundTrackName": "ground_swatch", 
+                "HitRect": {
+                    "mHeight": 95, 
+                    "mWidth": 32, 
+                    "mX": 10, 
+                    "mY": 10
+                }, 
+                "Hitpoints": 268353535, 
+                "ShadowOffset": {
+                    "x": 0, 
+                    "y": 0, 
+                    "z": 0
+                }, 
+                "Speed": 0, 
+                "WavePointCost": 100, 
+                "Weight": 1000, 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness1"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed2"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "flash"
+            ], 
+            "objdata": {
+                "TypeName": "iceage_hunter", 
+                "ZombieClass": "ZombieIceAgeHunter", 
+                "Properties": "RTID(ZombieFlash@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieIceAgeHunterGroup", 
+                    "IceAgeFrostWindGroup", 
+                    "FrostbiteIceBlockPlantGroup", 
+                    "FrostbiteIceBlockZombieGroup", 
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AudioGroups": [
+                    "PlantCoconutCannonAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_Hunter", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_ICEAGE_HUNTER", 
+                "HomeWorld": "iceage", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "objclass": "ZombieIceAgeHunterProps", 
+            "aliases": [
+                "ZombieFlash"
+            ], 
+            "objdata": {
+                "Speed": 0, 
+                "Hitpoints": 268000000, 
+                "EatDPS": 0, 
+                "CanSpawnPlantFood": false, 
+                "ChillInsteadOfFreeze": true, 
+                "HasShadow": false, 
+                "CanBeFlicked": false, 
+                "CanTriggerZombieWin": false, 
+                "CanSurrender": true, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "Actions": [
+                    "RTID(ZombieFlashAction@CurrentLevel)"
+                ], 
+                "HitRect": {
+                    "mX": -10000, 
+                    "mY": 90000, 
+                    "mWidth": 0, 
+                    "mHeight": 0
+                }, 
+                "AttackRect": {
+                    "mX": 15, 
+                    "mY": 0, 
+                    "mWidth": 90, 
+                    "mHeight": 25
+                }, 
+                "NearAttackRange": 0, 
+                "FarAttackRange": 10, 
+                "Cost": 25, 
+                "WavePointCost": 25, 
+                "Weight": 10, 
+                "SnowballsPerBarrage": 999, 
+                "ArtCenter": {
+                    "x": 90000, 
+                    "y": 90000
+                }, 
+                "ShadowOffset": {
+                    "x": 10000, 
+                    "y": 0, 
+                    "z": 1.2
+                }, 
+                "GroundTrackName": "ground_swatch", 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed0"
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieProjectileActionDefinition", 
+            "aliases": [
+                "ZombieFlashAction"
+            ], 
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 0, 
+                    "Max": 10
+                }, 
+                "TimeBetween": {
+                    "Min": 2.5, 
+                    "Max": 12.5
+                }, 
+                "TimeBetweenBarrages": {
+                    "Min": 0, 
+                    "Max": 0
+                }, 
+                "Projectile": "RTID(Flash@CurrentLevel)", 
+                "ProjectileSound": "", 
+                "SpawnOffset": {
+                    "x": 0, 
+                    "y": -448, 
+                    "z": 10
+                }, 
+                "ApexHeight": 100, 
+                "TimeUntilHit": 0.75
+            }
+        }, 
+        {
+            "objclass": "ProjectilePropertySheet", 
+            "aliases": [
+                "Flash"
+            ], 
+            "objdata": {
+                "HasShadow": false, 
+                "BaseDamage": 0, 
+                "DiesOnImpact": false, 
+                "DamageFlags": [
+                    "shooter"
+                ], 
+                "CollisionFlags": [ ], 
+                "Conditions": [ ], 
+                "InitialVelocity": [
+                    {
+                        "Min": 512, 
+                        "Max": 6400
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ], 
+                "InitialAcceleration": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ], 
+                "InitialRotation": {
+                    "Min": 1.48, 
+                    "Max": 1.65
+                }, 
+                "InitialScale": {
+                    "Min": 30, 
+                    "Max": 100
+                }, 
+                "AttachedPAM": "POPANIM_EFFECTS_FROSTBITE_CHILL_WIND", 
+                "AttachedPAMAnimRigClass": "", 
+                "AttachedPAMOffset": {
+                    "x": -1050, 
+                    "y": -150
+                }, 
+                "AttachedPAMAnimationToPlay": [
+                    ""
+                ], 
+                "CollisionRect": {
+                    "mX": -15, 
+                    "mY": -15, 
+                    "mWidth": 30, 
+                    "mHeight": 30
+                }, 
+                "ImpactSoundEvent": "", 
+                "ImpactSoundThrottleTimer": 0.075, 
+                "ImpactPAM": "", 
+                "ImpactPAMAnimationToPlay": [
+                    ""
+                ], 
+                "ImpactOffset": [
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }, 
+                    {
+                        "Min": 0, 
+                        "Max": 0
+                    }
+                ]
+            }
+        }, 
+        {
+            "objclass": "ZombieType", 
+            "aliases": [
+                "shadow"
+            ], 
+            "objdata": {
+                "TypeName": "modern_balloon", 
+                "ZombieClass": "ZombieModernBalloon", 
+                "Properties": "RTID(ZombieShadowDefault@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieModernBalloonGroup", 
+                    "ZombieLostCityBasicGroup", 
+                    "ZombieLostCityBugEffectsGroup"
+                ], 
+                "AudioGroups": [
+                    "ZombieModernBalloonAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_ModernBalloon", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_MODERN_BALLOON", 
+                "HomeWorld": "modern", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "aliases": [
+                "ZombieShadowDefault"
+            ], 
+            "objclass": "ZombiePropertySheet", 
+            "objdata": {
+                "ArmDropFraction": -1, 
+                "ArtCenter": {
+                    "x": 100, 
+                    "y": 130
+                }, 
+                "AttackRect": {
+                    "mHeight": 125, 
+                    "mWidth": 20, 
+                    "mX": 15, 
+                    "mY": 0
+                }, 
+                "CanSpawnPlantFood": false, 
+                "CanBeFlicked": false, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "ChillInsteadOfFreeze": true, 
+                "CanSurrender": true, 
+                "Cost": 150, 
+                "DamageAmountWhichAlsoKillsBasic": 10000, 
+                "DamageFraction": 0.5, 
+                "EatDPS": 0, 
+                "GroundTrackName": "ground_swatch", 
+                "HeadDropFraction": -1, 
+                "HitRect": {
+                    "mHeight": 125, 
+                    "mWidth": 42, 
+                    "mX": 0, 
+                    "mY": 10
+                }, 
+                "Hitpoints": 26835353, 
+                "NormalDeathWhenMowed": true, 
+                "PlantsWhichAlsoKillBasic": {
+                    "List": [ ], 
+                    "ListType": "whitelist"
+                }, 
+                "ShadowOffset": {
+                    "x": 78, 
+                    "y": 78, 
+                    "z": 78
+                }, 
+                "Speed": 0.5, 
+                "WavePointCost": 400, 
+                "Weight": 3000, 
+                "ZombieArmorProps": [
+                    "RTID(BalloonDefault@ArmorTypes)"
+                ], 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed4"
+                    }
+                ]
+            }
+        }, 

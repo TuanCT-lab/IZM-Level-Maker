@@ -1,0 +1,87 @@
+{
+            "objclass": "ZombieType", 
+            "aliases": [
+                "zombie_shadow"
+            ], 
+            "objdata": {
+                "TypeName": "modern_balloon", 
+                "ZombieClass": "ZombieModernBalloon", 
+                "Properties": "RTID(ZombieShadowDefault@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieModernBalloonGroup", 
+                    "ZombieLostCityBasicGroup", 
+                    "ZombieLostCityBugEffectsGroup"
+                ], 
+                "AudioGroups": [
+                    "ZombieModernBalloonAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_ModernBalloon", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_MODERN_BALLOON", 
+                "HomeWorld": "modern", 
+                "Placeable": true
+            }
+        }, 
+        {
+            "aliases": [
+                "ZombieShadowDefault"
+            ], 
+            "objclass": "ZombiePropertySheet", 
+            "objdata": {
+                "ArmDropFraction": -1, 
+                "ArtCenter": {
+                    "x": 100, 
+                    "y": 130
+                }, 
+                "AttackRect": {
+                    "mHeight": 125, 
+                    "mWidth": 20, 
+                    "mX": 15, 
+                    "mY": 0
+                }, 
+                "CanSpawnPlantFood": false, 
+                "CanBeFlicked": false, 
+                "CanBePlantTossedStrong": false, 
+                "CanBePlantTossedWeak": false, 
+                "ChillInsteadOfFreeze": true, 
+                "CanSurrender": true, 
+                "Cost": 150, 
+                "DamageAmountWhichAlsoKillsBasic": 10000, 
+                "DamageFraction": 0.5, 
+                "EatDPS": 0, 
+                "GroundTrackName": "ground_swatch", 
+                "HeadDropFraction": -1, 
+                "HitRect": {
+                    "mHeight": 125, 
+                    "mWidth": 42, 
+                    "mX": 0, 
+                    "mY": 10
+                }, 
+                "Hitpoints": 268353535, 
+                "NormalDeathWhenMowed": true, 
+                "PlantsWhichAlsoKillBasic": {
+                    "List": [ ], 
+                    "ListType": "whitelist"
+                }, 
+                "ShadowOffset": {
+                    "x": 78, 
+                    "y": 78, 
+                    "z": 78
+                }, 
+                "Speed": 0.4, 
+                "WavePointCost": 400, 
+                "Weight": 3000, 
+                "ZombieArmorProps": [
+                    "RTID(BalloonDefault@ArmorTypes)"
+                ], 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness4"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed4"
+                    }
+                ]
+            }
+        }

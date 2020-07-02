@@ -1,0 +1,78 @@
+{
+            "objclass": "ZombieType", 
+            "aliases": [
+                "rap_punk"
+            ], 
+            "objdata": {
+                "TypeName": "eighties_punk", 
+                "ZombieClass": "ZombieEightiesPunk", 
+                "Properties": "RTID(ZombieEightiesPunk@CurrentLevel)", 
+                "ResourceGroups": [
+                    "ZombieEightiesPunkGroup"
+                ], 
+                "AudioGroups": [
+                    "ZombieEightiesPunkAudio"
+                ], 
+                "AnimRigClass": "ZombieAnimRig_EightiesPunk", 
+                "PopAnim": "POPANIM_ZOMBIE_ZOMBIE_80S_PUNK", 
+                "HomeWorld": "eighties"
+            }
+        }, 
+        {
+            "aliases": [
+                "ZombieEightiesPunk"
+            ], 
+            "objclass": "ZombieEightiesPunkProps", 
+            "objdata": {
+                "ArtCenter": {
+                    "x": 90, 
+                    "y": 125
+                }, 
+                "AttackRect": {
+                    "mHeight": 95, 
+                    "mWidth": 20, 
+                    "mX": 15, 
+                    "mY": 0
+                }, 
+                "CanSpawnPlantFood": true, 
+                "Cost": 150, 
+                "EatDPS": 100, 
+                "GroundTrackName": "ground_swatch", 
+                "HitRect": {
+                    "mHeight": 95, 
+                    "mWidth": 32, 
+                    "mX": 10, 
+                    "mY": 10
+                }, 
+                "Hitpoints": 250, 
+                "JamStyle": "jam_rap", 
+                "KickFallbackDPS": 200, 
+                "PlantsToKickInsteadOfPush": {
+                    "List": [
+                        "gravebuster", 
+                        "hotpotato"
+                    ], 
+                    "ListType": "whitelist"
+                }, 
+                "PushCooldown": 2, 
+                "PushDamageToZombies": 200, 
+                "ShadowOffset": {
+                    "x": 5, 
+                    "y": 0, 
+                    "z": 1.4
+                }, 
+                "Speed": 0.23125, 
+                "WavePointCost": 300, 
+                "Weight": 1000, 
+                "ZombieStats": [
+                    {
+                        "Type": "toughness", 
+                        "Value": "toughness2"
+                    }, 
+                    {
+                        "Type": "speed", 
+                        "Value": "speed3"
+                    }
+                ]
+            }
+        }, 
