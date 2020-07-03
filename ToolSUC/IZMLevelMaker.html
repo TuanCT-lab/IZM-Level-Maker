@@ -79,44 +79,57 @@ font-size: 53px;
 
 <title>IZM Level Generator version 2.0</title>
     <div style="margin-top: 15px">
+	<a style="font-size:20px">
 	<p style="color:red">Level Generator for I Zombie Mod by Tuan Tran</p>
 	<p style="color:red">WARNING: All IZM custom rewards are set default as Bag of Coins. Do not adding any Reward unless you want your pp.dat broken</p>
 	<p>
-	<p> Description:
-    <input type="text" id="description" style="width: 20%" value="">
+
+	<p style="font-size:20px">Description:
+    <input  type="text" autocapitalize="off" id="description" style="width: 20%" value="">
+	<p style="font-size:20px"> Show Zombie Threat Alerts:
+    <input type="text" id="showthreat" style="width: 7%" value="false">
+
     </p>
-	<p> Show Zombie Threat Alerts:
-    <input type="text" id="showthreat" style="width: 3%" value="false">
+	<p style="font-size:20px"> Level Number:
+    <input  type="text" id="levelnumber" style="width: 5%" value="">
+
     </p>
-	<p> Level Number:
-    <input type="text" id="levelnumber" style="width: 3%" value="">
+	<p style="font-size:20px"> Starting Brain:
+    <input  type="text" id="startbrain" style="width: 7%" value="">
+
     </p>
-	<p> Starting Brain:
-    <input type="text" id="startbrain" style="width: 3%" value="">
+	<p style="font-size:20px"> Intro:
+    <input  type="text" id="intro" style="width: 13%" value="IZMIntro">
+
     </p>
-	<p> Intro:
-    <input type="text" id="intro" style="width: 7%" value="IZMIntro">
+	<p style="font-size:20px"> Speedy Zombie:
+    <input  type="text" id="speedtest" style="width: 7%" value="false">
+
+    </p>	
+	<p style="font-size:20px"> Seed Slot Override:
+    <input  type="text" id="seedslot" style="width: 7%" value="6">
+
+    </p>	
+	<p style="font-size:20px"> SeedBank Preset or Chooser:
+    <input  type="text" id="seedbank" style="width: 10%" value="preset">
+
     </p>
-	<p> Speedy Zombie:
-    <input type="text" id="speedtest" style="width: 3%" value="false">
+	<a class="mdui-btn-icon"> 	
+	<p style="font-size:20px"> Level Name:
+    <input  type="text" id="byname" style="width: 7%" value="">
+
+    </p>	
+	<p style="font-size:20px"> Stage Module:
+    <input  type="text" id="stage" style="width: 13%" value="IZMStage">
+
     </p>
-	<p> Seed Slot Override:
-    <input type="text" id="seedslot" style="width: 3%" value="6">
+	<p style="font-size:20px"> Zombie Place Column (4 - 6):
+    <input  type="text" id="gridlist" style="width: 7%" value="4">
+
     </p>
-	<p> SeedBank Preset or Chooser:
-    <input type="text" id="seedbank" style="width: 5%" value="preset">
-    </p>
-	<p> Level Name:
-    <input type="text" id="byname" style="width: 10%" value="">
-    </p>
-	<p> Stage Module:
-    <input type="text" id="stage" style="width: 9%" value="IZMStage">
-    </p>
-	<p> Zombie Place Column (4 - 6):
-    <input type="text" id="gridlist" style="width: 3%" value="4">
-    </p>
-	<p> Zombie Trigger Spawn Column (3 - 5):
-    <input type="text" id="trigger" style="width: 3%" value="">
+	<p style="font-size:20px"> Zombie Trigger Spawn Column (3 - 5):
+    <input  type="text" id="trigger" style="width: 7%" value="">
+
     </p>
     </p>
     </p>
@@ -142,11 +155,9 @@ textarea {
    src: url(fbUsv8C5eI-Black.woff);
 }
     </style>
-    <textarea id="xml" rows="20" cols="50" style="display: none;"></textarea> 
-     <p> </p>
-    <button onclick="CompileLevelXML()">Finished</button>
-	
-	<button type="button" onclick="download()">Download File</button>
+    <textarea id="xml" rows="20" cols="50" style="display: none;"></textarea>  
+    <button class="mdui-btn mdui-btn-dense mdui-textfiled" onclick="CompileLevelXML()">Finished</button>
+	<button class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" onclick="download()">Download File</button>
 	<script>
 	//I'm lazyyyy
 	function download(){
@@ -164,7 +175,7 @@ textarea {
  }
  //Don't want to code this anymore
  </script>
- <input type="button" value="Copy" id="copy" onclick="copyText();" >
+ <input  type="button" class="mdui-btn mdui-btn-dense mdui-textfiled" value="Copy" id="copy" onclick="copyText();" >
 <script type="text/javascript">
 
 function copyText(){
@@ -172,7 +183,7 @@ function copyText(){
  document.execCommand('copy');
 }
 </script>
-<input type="checkbox" id="icecubed" style="" onclick="" value="">
+<input  type="checkbox" id="icecubed" style="" onclick="" value="">
      <p> </p>
     <textarea id="output" rows="10" cols="50" style="display: none;"></textarea>
 	<script>
@@ -357,13 +368,13 @@ function toggleoutputvisibility() {
             color: blue;
         }
         .paragraph1 {
-            font-size: 25px;
+            font-size: 20px;
              font-family: myFirstFont;
    src: url(fbUsv8C5eI-Black.woff)
             line-height: 2px;
         }
         .paragraph2 {
-            font-size: 25px;
+            font-size: 20px;
              font-family: myFirstFont;
    src: url(fbUsv8C5eI-Black.woff)
         }
@@ -392,14 +403,14 @@ function toggleoutputvisibility() {
     <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
       <div class="mdui-col">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-layout" value="" checked/>
+          <input  type="radio" name="doc-theme-layout" value="" checked/>
           <i class="mdui-radio-icon"></i>
           Light
         </label>
       </div>
       <div class="mdui-col">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-layout" value="dark" />
+          <input  type="radio" name="doc-theme-layout" value="dark" />
           <i class="mdui-radio-icon"></i>
           Dark
         </label>
@@ -410,133 +421,133 @@ function toggleoutputvisibility() {
     <form class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
       <div class="mdui-col mdui-text-color-amber">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="amber" />
+          <input  type="radio" name="doc-theme-primary" value="amber" />
           <i class="mdui-radio-icon"></i>
           Amber
         </label>
       </div>
       <div class="mdui-col mdui-text-color-red">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="blue" />
+          <input  type="radio" name="doc-theme-primary" value="blue" />
           <i class="mdui-radio-icon"></i>
           Blue
         </label>
       </div>
       <div class="mdui-col mdui-text-color-blue-grey">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="blue-grey" />
+          <input  type="radio" name="doc-theme-primary" value="blue-grey" />
           <i class="mdui-radio-icon"></i>
           Blue Grey
         </label>
       </div>
       <div class="mdui-col mdui-text-color-brown">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="brown" />
+          <input  type="radio" name="doc-theme-primary" value="brown" />
           <i class="mdui-radio-icon"></i>
           Brown
         </label>
       </div>
       <div class="mdui-col mdui-text-color-cyan">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="cyan" />
+          <input  type="radio" name="doc-theme-primary" value="cyan" />
           <i class="mdui-radio-icon"></i>
           Cyan
         </label>
       </div>
       <div class="mdui-col mdui-text-color-deep-orange">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="deep-orange" />
+          <input  type="radio" name="doc-theme-primary" value="deep-orange" />
           <i class="mdui-radio-icon"></i>
           Deep Orange
         </label>
       </div>
       <div class="mdui-col mdui-text-color-deep-purple">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="deep-purple" />
+          <input  type="radio" name="doc-theme-primary" value="deep-purple" />
           <i class="mdui-radio-icon"></i>
           Deep Purple
         </label>
       </div>
       <div class="mdui-col mdui-text-color-green">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="green" />
+          <input  type="radio" name="doc-theme-primary" value="green" />
           <i class="mdui-radio-icon"></i>
           Green
         </label>
       </div>
       <div class="mdui-col mdui-text-color-grey">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="grey" />
+          <input  type="radio" name="doc-theme-primary" value="grey" />
           <i class="mdui-radio-icon"></i>
           Grey
         </label>
       </div>
       <div class="mdui-col mdui-text-color-indigo">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="indigo" checked/>
+          <input  type="radio" name="doc-theme-primary" value="indigo" checked/>
           <i class="mdui-radio-icon"></i>
           Indigo
         </label>
       </div>
       <div class="mdui-col mdui-text-color-light-blue">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="light-blue" />
+          <input  type="radio" name="doc-theme-primary" value="light-blue" />
           <i class="mdui-radio-icon"></i>
           Light Blue
         </label>
       </div>
       <div class="mdui-col mdui-text-color-light-green">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="light-green" />
+          <input  type="radio" name="doc-theme-primary" value="light-green" />
           <i class="mdui-radio-icon"></i>
           Light Green
         </label>
       </div>
       <div class="mdui-col mdui-text-color-lime">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="lime" />
+          <input  type="radio" name="doc-theme-primary" value="lime" />
           <i class="mdui-radio-icon"></i>
           Lime
         </label>
       </div>
       <div class="mdui-col mdui-text-color-orange">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="orange" />
+          <input  type="radio" name="doc-theme-primary" value="orange" />
           <i class="mdui-radio-icon"></i>
           Orange
         </label>
       </div>
       <div class="mdui-col mdui-text-color-pink">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="pink" />
+          <input  type="radio" name="doc-theme-primary" value="pink" />
           <i class="mdui-radio-icon"></i>
           Pink
         </label>
       </div>
       <div class="mdui-col mdui-text-color-purple">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="purple" />
+          <input  type="radio" name="doc-theme-primary" value="purple" />
           <i class="mdui-radio-icon"></i>
           Purple
         </label>
       </div>
       <div class="mdui-col mdui-text-color-red">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="red" />
+          <input  type="radio" name="doc-theme-primary" value="red" />
           <i class="mdui-radio-icon"></i>
           Red
         </label>
       </div>
       <div class="mdui-col mdui-text-color-teal">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="teal" />
+          <input  type="radio" name="doc-theme-primary" value="teal" />
           <i class="mdui-radio-icon"></i>
           Teal
         </label>
       </div>
       <div class="mdui-col mdui-text-color-yellow">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-primary" value="yellow" />
+          <input  type="radio" name="doc-theme-primary" value="yellow" />
           <i class="mdui-radio-icon"></i>
           Yellow
         </label>
@@ -547,112 +558,112 @@ function toggleoutputvisibility() {
     <form class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
       <div class="mdui-col mdui-text-color-amber">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="amber" />
+          <input  type="radio" name="doc-theme-accent" value="amber" />
           <i class="mdui-radio-icon"></i>
           Amber
         </label>
       </div>
       <div class="mdui-col mdui-text-color-blue">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="blue" />
+          <input  type="radio" name="doc-theme-accent" value="blue" />
           <i class="mdui-radio-icon"></i>
           Blue
         </label>
       </div>
       <div class="mdui-col mdui-text-color-cyan">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="cyan" />
+          <input  type="radio" name="doc-theme-accent" value="cyan" />
           <i class="mdui-radio-icon"></i>
           Cyan
         </label>
       </div>
       <div class="mdui-col mdui-text-color-deep-orange">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="deep-orange" />
+          <input  type="radio" name="doc-theme-accent" value="deep-orange" />
           <i class="mdui-radio-icon"></i>
           Deep Orange
         </label>
       </div>
       <div class="mdui-col mdui-text-color-deep-purple">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="deep-purple" />
+          <input  type="radio" name="doc-theme-accent" value="deep-purple" />
           <i class="mdui-radio-icon"></i>
           Deep Purple
         </label>
       </div>
       <div class="mdui-col mdui-text-color-green">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="green" />
+          <input  type="radio" name="doc-theme-accent" value="green" />
           <i class="mdui-radio-icon"></i>
           Green
         </label>
       </div>
       <div class="mdui-col mdui-text-color-indigo">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="indigo" />
+          <input  type="radio" name="doc-theme-accent" value="indigo" />
           <i class="mdui-radio-icon"></i>
           Indigo
         </label>
       </div>
       <div class="mdui-col mdui-text-color-light-blue">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="light-blue" />
+          <input  type="radio" name="doc-theme-accent" value="light-blue" />
           <i class="mdui-radio-icon"></i>
           Light Blue
         </label>
       </div>
       <div class="mdui-col mdui-text-color-light-green">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="light-green" />
+          <input  type="radio" name="doc-theme-accent" value="light-green" />
           <i class="mdui-radio-icon"></i>
           Light Green
         </label>
       </div>
       <div class="mdui-col mdui-text-color-lime">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="lime" />
+          <input  type="radio" name="doc-theme-accent" value="lime" />
           <i class="mdui-radio-icon"></i>
           Lime
         </label>
       </div>
       <div class="mdui-col mdui-text-color-orange">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="orange" />
+          <input  type="radio" name="doc-theme-accent" value="orange" />
           <i class="mdui-radio-icon"></i>
           Orange
         </label>
       </div>
       <div class="mdui-col mdui-text-color-pink">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="pink" checked/>
+          <input  type="radio" name="doc-theme-accent" value="pink" checked/>
           <i class="mdui-radio-icon"></i>
           Pink
         </label>
       </div>
       <div class="mdui-col mdui-text-color-purple">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="purple" />
+          <input  type="radio" name="doc-theme-accent" value="purple" />
           <i class="mdui-radio-icon"></i>
           Purple
         </label>
       </div>
       <div class="mdui-col mdui-text-color-red">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="red" />
+          <input  type="radio" name="doc-theme-accent" value="red" />
           <i class="mdui-radio-icon"></i>
           Red
         </label>
       </div>
       <div class="mdui-col mdui-text-color-teal">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="teal" />
+          <input  type="radio" name="doc-theme-accent" value="teal" />
           <i class="mdui-radio-icon"></i>
           Teal
         </label>
       </div>
       <div class="mdui-col mdui-text-color-yellow">
         <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-accent" value="yellow" />
+          <input  type="radio" name="doc-theme-accent" value="yellow" />
           <i class="mdui-radio-icon"></i>
           Yellow
         </label>
