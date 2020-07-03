@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+   <body style="background-color:white;">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="renderer" content="webkit">
+  <body style="background-color:white;">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <title>PvZ2 Tools</title>
+  <link rel="stylesheet" href="assets/mdui-v0.4.2/css/mdui.min.css"/>
+  <link rel="stylesheet" href="assets/highlight-9.12.0/styles/github-gist.css"/>
+  <link rel="stylesheet" href="assets/highlight-9.12.0/styles/railscasts.css"/>
+  <link rel="stylesheet" href="assets/docs/css/docs.css"/>
+</head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar  mdui-theme-primary-indigo mdui-theme-accent-pink">
+<header class="mdui-appbar mdui-appbar-fixed">
+  <div class="mdui-toolbar mdui-color-theme">
+    <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
+    <a class="mdui-typo-headline mdui-hidden-xs">IZM Plant Placer</a>
+    <a href="index.html" class="mdui-typo-title"></a>
+    <div class="mdui-toolbar-spacer"></div>
+        <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5
+	c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
+	c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4
+	c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7
+	c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5
+	c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"></path>
+      </svg>
+    </a>
+  </div>
+</header>
+<style> 
+
+@font-face {
+font-size: 53px;
+   font-family: myFirstFont;
+   src: url(fbUsv8C5eI-Black.woff);
+}
+
+* {
+   font-family: myFirstFont;
+}
+</style>
+<div class="mdui-drawer" id="main-drawer">
+  <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
+    <div class="mdui-collapse-item mdui-collapse-item-open">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">near_me</i>
+        <div class="mdui-list-item-content">Level making tool</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+	  <a href="IZMLevelMaker.html" class="mdui-list-item mdui-ripple ">IZM Level Maker</a>
+		<a href="IZMRule.txt" class="mdui-list-item mdui-ripple ">IZM Rules</a>
+        <a href="IZMPlant.html" class="mdui-list-item mdui-ripple mdui-list-item-active">IZM Plant Placer</a>
+      </div>
+    </div>
+
+    <div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">layers</i>
+        <div class="mdui-list-item-content">ABOUT </div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+        <a href="about.html" class="mdui-list-item mdui-ripple ">About</a>
+      </div>
+	  <div class="mdui-collapse-item-body mdui-list">
+        <a href="https://www.paypal.me/TuanTranYTB" class="mdui-list-item mdui-ripple ">Donate to support</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<a id="anchor-top"></a>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body background="./PVZ2GRIDITEMS_files/bg.png" style="background-repeat: no-repeat;"><img src="https://asukikanetaka.github.io/PVZ2GRIDITEMS_files/plants/sunflower.png" style="display: block; position: absolute; z-index: -1; visibility: hidden; top: 8px; left: 52px;">
+    <div style="width: 396px; height: 51px;"><canvas id="0x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div><div style="width: 396px; height: 51px;"><canvas id="0x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div><div style="width: 400px; height: 51px;"><canvas id="0x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div><div style="width: 600px; height: 51px;"><canvas id="0x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><img src="./PVZ2GRIDITEMS_files/ice.gif" id="548" style="margin-left: 15px;"><input type="checkbox" id="icecubed" style="" onclick="" value=""></div></div><div style="width: 600px; height: 51px;"><canvas id="0x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><img src="./PVZ2GRIDITEMS_files/Eraser.png" id="547" onclick="selectSprite(event)" style="margin-left: 15px;"></div>
+    <div style="margin-top: 15px">
+        <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/sunflower.png" id="1" onclick="selectSprite(event)" style="outline: red solid 0.5px;width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/peashooter.png" id="2" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/wallnut.png" id="3" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/potatomine.png" id="4" onclick="selectSprite(event)" style="width:37px;height:40px;">
+		<img src="./PVZ2GRIDITEMS_files/plants/cabbagepult.png" id="5" onclick="selectSprite(event)" style="width:37px;height:40px;">
+    </div>
+    <div>   
+        <img src="./PVZ2GRIDITEMS_files/plants/bloomerang.png" id="6" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/iceburg.png" id="7" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/bonkchoy.png" id="9" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/repeater.png" id="10" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/twinsunflower.png" id="11" onclick="selectSprite(event)" style="width:37px;height:40px;">
+    </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/kernelpult.png" id="12" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/snapdragon.png" id="13" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/spikeweed.png" id="14" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/springbean.png" id="16" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/threepeater.png" id="17" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/spikerock.png" id="18" onclick="selectSprite(event)" style="width:37px;height:40px;">
+    </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/splitpea.png" id="20" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/chilibean.png" id="21" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/lightningreed.png" id="22" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/tallnut.png" id="23" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/peapod.png" id="24" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/melonpult.png" id="25" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/wintermelon.png" id="26" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/laser_bean.png" id="27" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/citron.png" id="29" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/holonut.png" id="31" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/sunshroom.png" id="34" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/puffshroom.png" id="35" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/fumeshroom.png" id="36" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/magnetshroom.png" id="38" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/tanglekelp.png" id="40" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/bowlingbulb.png" id="41" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/guacodile.png" id="42" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/pepperpult.png" id="45" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/chardguard.png" id="46" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/stunion.png" id="47" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/xshot.png" id="48" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/redstinger.png" id="49" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/akee.png" id="50" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/endurian.png" id="51" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/stallia.png" id="52" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/phatbeet.png" id="54" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/celerystalker.png" id="55" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/garlic.png" id="57" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/sporeshroom.png" id="58" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/primalpeashooter.png" id="60" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/primalwallnut.png" id="61" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/primalsunflower.png" id="63" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/primalpotatomine.png" id="64" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/moonflower.png" id="65" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/nightshade.png" id="66" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/shadowshroom.png" id="67" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/dusklobber.png" id="68" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/grimrose.png" id="69" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/snowpea.png" id="70" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/powerlily.png" id="71" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/squash.png" id="72" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/torchwood.png" id="73" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/starfruit.png" id="76" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/hypnoshroom.png" id="77" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/peanut.png" id="78" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/chomper.png" id="79" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/homingthistle.png" id="80" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/ghostpepper.png" id="81" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/sweetpotato.png" id="82" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/sapfling.png" id="83" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/firepeashooter.png" id="85" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/dandelion.png" id="86" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/lavaguava.png" id="87" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/toadstool.png" id="88" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/cactus.png" id="90" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/coldsnapdragon.png" id="94" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/bloominghearts.png" id="96" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+        <img src="./PVZ2GRIDITEMS_files/plants/wasabiwhip.png" id="98" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/explodeonut.png" id="99" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/kiwibeast.png" id="100" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/applemortar.png" id="101" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/bombegranate.png" id="102" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/parsnip.png" id="104" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        </div>
+    <div>
+		<img src="./PVZ2GRIDITEMS_files/plants/snappea.png" id="132" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/zoybeanpod.png" id="133" onclick="selectSprite(event)" style="width:37px;height:40px;">
+        <img src="./PVZ2GRIDITEMS_files/plants/dazeychain.png" id="134" onclick="selectSprite(event)" style="width:37px;height:40px;">
+		<img src="./PVZ2GRIDITEMS_files/plants/blastberry.png" id="135" onclick="selectSprite(event)" style="width:37px;height:40px;">
+		<img src="./PVZ2GRIDITEMS_files/plants/pokra.png" id="136" onclick="selectSprite(event)" style="width:37px;height:40px;">
+		<img src="./PVZ2GRIDITEMS_files/plants/imppear.png" id="137" onclick="selectSprite(event)" style="width:37px;height:40px;">
+		</div>
+		<div>
+		
+		<img src="./PVZ2GRIDITEMS_files/Env/peach.png" id="138" onclick="selectSprite(event)" style="width:37px;height:40px;">
+		<img src="./PVZ2GRIDITEMS_files/Env/gatlingpea.png" id="139" onclick="selectSprite(event)" style="width:37px;height:40px;">
+		<img src="./PVZ2GRIDITEMS_files/Env/turnip.png" id="140" onclick="selectSprite(event)" style="width:37px;height:40px;">
+    </div>
+
+    <div style="margin-top: 15px">
+        <p id="p1" class="paragraph1"> Plant Placement ID: </p><p id="p2" class="paragraph1">
+    </p></div>
+    <style type="text/css">
+textarea {
+ width: 410px; height: 250px; font-size: 18px; font-family: myFirstFont;
+   src: url(fbUsv8C5eI-Black.woff);
+}
+    </style>
+<style> 
+@font-face {
+   font-family: myFirstFont;
+   src: url(fbUsv8C5eI-Black.woff);
+}
+
+* {
+   font-family: myFirstFont;
+}
+</style>
+    <textarea id="xml" rows="20" cols="50" style="display: none;"></textarea> 
+     <p> </p>
+    <button class="mdui-btn mdui-btn-dense mdui-textfiled" onclick="CompileLevelXML()">Finished</button>
+	<button class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" onclick="download()">Download File</button>
+	<input class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" value="Copy" id="copy" onclick="copyText();" >
+	<script>
+	//I'm lazyyyy
+	function download(){
+    var text = document.getElementById("output").value;
+    text = text.replace(/\n/g, "\r\n");
+    var blob = new Blob([text], { type: "text/plain"});
+    var anchor = document.createElement("a");
+    anchor.download = "IZMP.json";
+    anchor.href = window.URL.createObjectURL(blob);
+    anchor.target ="_blank";
+    anchor.style.display = "none"; 
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+ }
+ //Don't want to code this anymore
+ </script>
+<script type="text/javascript">
+
+function copyText(){
+ document.getElementById("output").select();
+ document.execCommand('copy');
+}
+</script>
+     <p> </p>
+    <textarea id="output" rows="10" cols="50" style="display: none;"></textarea> 
+        <script type="text/javascript">
+        var version = 1.0;
+        var eraser = 547;
+        var iceblock = 548;
+        var array = new Array();
+        document.getElementById('output').style.display = "none";   
+        document.getElementById("xml").value = "";
+        document.getElementById("output").value = "";
+        var mouseOverSprite = document.createElement("img");
+            mouseOverSprite.style.display="block";
+            mouseOverSprite.style.position = "absolute";
+            mouseOverSprite.style.zIndex = "-1";
+        document.body.insertBefore(mouseOverSprite,document.body.firstChild);
+        document.getElementById('xml').style.display = "none";
+        //document.getElementById("xml").value += "\{\n            \"aliases\"\: \[\n                \"Gravestones\"\n            \],\n            \"objclass\"\: \"GravestoneProperties\",\n            \"objdata\"\: \{\n                \"ForceSpawnData\"\: \[\n";
+        document.addEventListener("mousemove",mouseMoveFunction);
+        var lastGridId = null;
+
+        function mouseMoveFunction(e){
+            var p1 = document.getElementById("p1");
+            if(e.target.nodeName == "CANVAS"){
+                p1.innerHTML = " Plant Placement ID: "+e.target.id
+
+                if(e.target.id == lastGridId){
+                    return;
+                }
+                lastGridId = e.target.id;
+                mouseOverSprite.style.visibility ="visible";
+                mouseOverSprite.style.top = e.target.offsetTop+"px";
+                mouseOverSprite.style.left = e.target.offsetLeft+"px";
+            }
+            else{
+                mouseOverSprite.style.visibility ="hidden";
+            }
+        }
+        document.addEventListener("click",mouseClickFunction);
+        function mouseClickFunction(e){
+            if(mouseOverSprite.style.visibility == "visible" && e.target.nodeName == "CANVAS"  && selectedSpriteId != eraser)
+            {
+                var icecubed = document.getElementById("icecubed");
+                var targetRect = e.target.getBoundingClientRect();
+                var a = e.target.id;
+                var x = a.charAt(0);
+                var b = e.target.id;
+                var y = b.charAt(2);
+                if(selectedSpriteId != iceblock){
+                document.getElementById("xml").value += (document.getElementById("xml").value.endsWith("}") ? ",\n" : "") + "                    {"  
+                if(icecubed.checked == true) {
+                document.getElementById("xml").value += "\n                        \"Condition\"\: \"icecubed\",";
+                }
+                document.getElementById("xml").value += "\n                        \"GridX\"\: " + x + ",\n                        \"GridY\"\: " + y + ",\n                        \"TypeName\"\: \""+ mouseOverSprite.src.substring(mouseOverSprite.src.lastIndexOf('/')+1).split('.')[0] + "\"\n                    }";
+            }
+            //if(selectedSpriteId = iceblock){
+            //    array.push(e.target.id);
+            //}
+                var icecubed = document.getElementById("icecubed");
+                var newImg = document.createElement("img");
+                newImg.src = mouseOverSprite.src;
+                newImg.style.position = "absolute";
+                newImg.style.left = targetRect.x+"px";
+                newImg.style.top = targetRect.y+"px";
+                newImg.style.zIndex = -1;
+                newImg.className = "newImg";
+                if(icecubed.checked == true){
+                    newImg.style.outline = "red solid 0.5px";
+                    e.target.style.outline = "rgb(0, 255, 255) solid 2.5px";
+                }
+                newImg.addEventListener("click",function(){
+                if(selectedSpriteId == eraser){
+                    var victim = "";
+                    console.log(e.target.style.outline);
+                        if(e.target.style.outline == "rgba(0, 0, 0, 0.2) solid 0.5px"){
+                         victim = "\n                    {\n                        \"GridX\"\: " + x + ",\n                        \"GridY\"\: " + y + ",\n                        \"TypeName\"\: \""+ this.src.substring(this.src.lastIndexOf('/')+1).split('.')[0] + "\"\n                    }";
+                         e.target.style.outline == "rgba(0, 0, 0, 0.2) solid 0.5px";
+                        }
+                        if(e.target.style.outline == "rgb(0, 255, 255) solid 2.5px"){
+                            console.log("yay");
+                         victim = "\n                    {\n                        \"Condition\"\: \"icecubed\",\n                        \"GridX\"\: " + x + ",\n                        \"GridY\"\: " + y + ",\n                        \"TypeName\"\: \""+ this.src.substring(this.src.lastIndexOf('/')+1).split('.')[0] + "\"\n                    }";
+                         e.target.style.outlineColor = "rgba(0, 0, 0, 0.2)";
+                         e.target.style.outlineStyle = "solid";
+                         e.target.style.outlineWidth = "0.5px";
+                        }
+                         console.log(victim);
+
+                        xml = document.getElementById("xml").value;
+                        document.getElementById("xml").value = xml.substr(0,xml.indexOf(victim)) + xml.substr(xml.indexOf(victim) + victim.length + 1, xml.length);
+                        this.remove();
+                        xml3 = document.getElementById("xml").value;
+                        xml4 = xml3.slice(0, -1);
+                        if(xml3.endsWith(",")){
+                        console.log(xml4);
+                            document.getElementById("xml").value = xml4;
+                        }
+
+                   }
+                }
+            );
+                document.body.appendChild(newImg);
+                
+                if(allAddedItems[e.target.id]==null)
+                    allAddedItems[e.target.id] = new Array(newImg);
+                else
+                    allAddedItems[e.target.id].push(newImg); 
+            }
+        }
+        var allAddedItems = new Array();
+        var selectedSpriteId = 1;
+        document.getElementById(selectedSpriteId).style.outline=".5px solid red";
+        mouseOverSprite.src = document.getElementById(selectedSpriteId).src;
+
+        function selectSprite(e){
+            document.getElementById(selectedSpriteId).style.outline="";
+            e.currentTarget.style.outline = ".5px solid red";
+            selectedSpriteId = e.currentTarget.id;
+            mouseOverSprite.src = e.currentTarget.src;
+            var canvases = document.getElementsByClassName('newImg');
+            if(selectedSpriteId == eraser){
+                mouseOverSprite.style.pointerEvents="none";
+                //document.getElementById('gridDiv').style.pointerEvents="none";
+                for(i=0;i<canvases.length;i++){
+                    canvases[i].style.zIndex=1;
+                }
+            } else {
+                mouseOverSprite.style.pointerEvents="";
+                for(i=0;i<canvases.length;i++){
+                    canvases[i].style.zIndex=-1;
+                }
+            }
+        }
+        function togglexmlvisibility() {
+        var display = document.getElementById('xml').style.display;
+        if(display == "none") {
+              document.getElementById('xml').style.display = "block";
+        }
+        if(display == "block") {
+              document.getElementById('xml').style.display = "none";
+        }
+     }
+function toggleoutputvisibility() {
+        var display = document.getElementById('output').style.display;
+        if(display == "none")
+              document.getElementById('output').style.display = "block";
+        }
+        function CompileLevelXML() {
+    var str = document.getElementById("xml").value;
+    toggleoutputvisibility();
+        document.getElementById("output").value += "        \{\n            \"aliases\"\: \[\n                \"IZMIP\"\n            \],\n            \"objclass\"\: \"InitialPlantProperties\",\n            \"objdata\"\: {\n                \"InitialPlantPlacements\"\: \[\n"
+        document.getElementById("output").value += str;
+        document.getElementById("output").value += "\n                \]\n            \}\n        \},";
+        console.log(allAddedItems);
+        }
+    </script>
+    <style>
+        p {
+            color: Red;
+        }
+        .paragraph1 {
+            font-size: 23px;
+             font-family: myFirstFont;
+   src: url(fbUsv8C5eI-Black.woff)
+            line-height: 2px;
+        }
+        .paragraph2 {
+            font-size: 23px;
+             font-family: myFirstFont;
+   src: url(fbUsv8C5eI-Black.woff)
+        }
+    </style>
+
+</div></div></body></html>
+
+
+
+  </div>
+</div>
+
+
+
+            <div class="mdui-col-xs-2 mdui-col-sm-6 doc-footer-nav-left"></div>
+
+          </div>
+  </div>
+</div>
+
+<div class="mdui-dialog" id="dialog-docs-theme">
+  <div class="mdui-dialog-title">Change color</div>
+  <div class="mdui-dialog-content">
+
+    <p class="mdui-typo-title">Theme color</p>
+    <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
+      <div class="mdui-col">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-layout" value="" checked/>
+          <i class="mdui-radio-icon"></i>
+          Light
+        </label>
+      </div>
+      <div class="mdui-col">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-layout" value="dark" />
+          <i class="mdui-radio-icon"></i>
+          Dark
+        </label>
+      </div>
+    </div>
+
+    <p class="mdui-typo-title mdui-text-color-theme">Font color</p>
+    <form class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
+      <div class="mdui-col mdui-text-color-amber">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="amber" />
+          <i class="mdui-radio-icon"></i>
+          Amber
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-red">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="blue" />
+          <i class="mdui-radio-icon"></i>
+          Blue
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-blue-grey">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="blue-grey" />
+          <i class="mdui-radio-icon"></i>
+          Blue Grey
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-brown">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="brown" />
+          <i class="mdui-radio-icon"></i>
+          Brown
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-cyan">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="cyan" />
+          <i class="mdui-radio-icon"></i>
+          Cyan
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-deep-orange">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="deep-orange" />
+          <i class="mdui-radio-icon"></i>
+          Deep Orange
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-deep-purple">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="deep-purple" />
+          <i class="mdui-radio-icon"></i>
+          Deep Purple
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-green">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="green" />
+          <i class="mdui-radio-icon"></i>
+          Green
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-grey">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="grey" />
+          <i class="mdui-radio-icon"></i>
+          Grey
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-indigo">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="indigo" checked/>
+          <i class="mdui-radio-icon"></i>
+          Indigo
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-light-blue">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="light-blue" />
+          <i class="mdui-radio-icon"></i>
+          Light Blue
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-light-green">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="light-green" />
+          <i class="mdui-radio-icon"></i>
+          Light Green
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-lime">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="lime" />
+          <i class="mdui-radio-icon"></i>
+          Lime
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-orange">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="orange" />
+          <i class="mdui-radio-icon"></i>
+          Orange
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-pink">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="pink" />
+          <i class="mdui-radio-icon"></i>
+          Pink
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-purple">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="purple" />
+          <i class="mdui-radio-icon"></i>
+          Purple
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-red">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="red" />
+          <i class="mdui-radio-icon"></i>
+          Red
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-teal">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="teal" />
+          <i class="mdui-radio-icon"></i>
+          Teal
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-yellow">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-primary" value="yellow" />
+          <i class="mdui-radio-icon"></i>
+          Yellow
+        </label>
+      </div>
+    </form>
+
+    <p class="mdui-typo-title mdui-text-color-theme-accent">Accent color</p>
+    <form class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
+      <div class="mdui-col mdui-text-color-amber">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="amber" />
+          <i class="mdui-radio-icon"></i>
+          Amber
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-blue">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="blue" />
+          <i class="mdui-radio-icon"></i>
+          Blue
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-cyan">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="cyan" />
+          <i class="mdui-radio-icon"></i>
+          Cyan
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-deep-orange">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="deep-orange" />
+          <i class="mdui-radio-icon"></i>
+          Deep Orange
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-deep-purple">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="deep-purple" />
+          <i class="mdui-radio-icon"></i>
+          Deep Purple
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-green">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="green" />
+          <i class="mdui-radio-icon"></i>
+          Green
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-indigo">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="indigo" />
+          <i class="mdui-radio-icon"></i>
+          Indigo
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-light-blue">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="light-blue" />
+          <i class="mdui-radio-icon"></i>
+          Light Blue
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-light-green">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="light-green" />
+          <i class="mdui-radio-icon"></i>
+          Light Green
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-lime">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="lime" />
+          <i class="mdui-radio-icon"></i>
+          Lime
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-orange">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="orange" />
+          <i class="mdui-radio-icon"></i>
+          Orange
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-pink">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="pink" checked/>
+          <i class="mdui-radio-icon"></i>
+          Pink
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-purple">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="purple" />
+          <i class="mdui-radio-icon"></i>
+          Purple
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-red">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="red" />
+          <i class="mdui-radio-icon"></i>
+          Red
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-teal">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="teal" />
+          <i class="mdui-radio-icon"></i>
+          Teal
+        </label>
+      </div>
+      <div class="mdui-col mdui-text-color-yellow">
+        <label class="mdui-radio mdui-m-b-1">
+          <input type="radio" name="doc-theme-accent" value="yellow" />
+          <i class="mdui-radio-icon"></i>
+          Yellow
+        </label>
+      </div>
+    </form>
+
+  </div>
+  <div class="mdui-divider"></div>
+  <div class="mdui-dialog-actions">
+    <button class="mdui-btn mdui-ripple mdui-float-left" mdui-dialog-cancel>Restore default</button>
+    <button class="mdui-btn mdui-ripple" mdui-dialog-confirm>ok</button>
+  </div>
+</div>
+
+<script src="assets/smooth-scroll-11.1.0/smooth-scroll.min.js"></script>
+<script src="assets/holder-2.9.4/holder.min.js"></script>
+<script src="assets/highlight-9.12.0/highlight.pack.js"></script>
+<script src="assets/mdui-v0.4.2/js/mdui.min.js"></script>
+<script>var $$ = mdui.JQ;</script>
+<script src="assets/docs/js/docs.js"></script>
+
