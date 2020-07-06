@@ -87,6 +87,19 @@ font-size: 53px;
         <a href="https://www.paypal.me/TuanTranYTB" class="mdui-list-item mdui-ripple ">Donate to support</a>
       </div>
     </div>
+		<div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">widgets</i>
+        <div class="mdui-list-item-content">Tutorial </div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+        <a href="https://www.bilibili.com/video/BV1Dg4y1v71B" class="mdui-list-item mdui-ripple ">By Beast</a>
+      </div>
+	  <div class="mdui-collapse-item-body mdui-list">
+        <a href="" class="mdui-list-item mdui-ripple ">By Tuan Tran (Coming Soon)</a>
+      </div>
+    </div>
     </div>
   </div>
 </div>
@@ -249,6 +262,12 @@ textarea {
     <button class="mdui-btn mdui-btn-dense mdui-textfiled" onclick="CompileLevelXML()">Finished <i class="mdui-icon material-icons">check</i></button>
 	<button class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" onclick="download()">Download File <i class="mdui-icon material-icons">file_download</i></button>
 	<input class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" value="Copy" id="copy" onclick="copyText();">
+	<input class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" value="Clear Box" onclick="javascript:eraseText();"> 
+	 <script>
+	 function eraseText() {
+    document.getElementById("output").value = "";
+}
+</script>
 	<script>
 	//I'm lazyyyy
 	function download(){
