@@ -21,7 +21,7 @@
 <header class="mdui-appbar mdui-appbar-fixed">
   <div class="mdui-toolbar mdui-color-theme">
     <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"  mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
-    <a class="mdui-typo-headline mdui-hidden-xs">IZM Rules</a>
+    <a class="mdui-typo-headline mdui-hidden-xs">IZM Level Maker</a>
     <a href="index.html" class="mdui-typo-title"></a>
     <div class="mdui-toolbar-spacer"></div>
 	    <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Refresh Page'}" type="submit"  onClick="refreshPage()"> <i class="mdui-icon material-icons">refresh</i></button>
@@ -70,7 +70,7 @@ font-size: 53px;
 </style>
 <div class="mdui-drawer" id="main-drawer">
   <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
-    <div class="mdui-collapse-item mdui-collapse-item-open">
+    <div class="mdui-collapse-item mdui-collapse-item-ripple">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">near_me</i>
         <div class="mdui-list-item-content">Level making tool</div>
@@ -78,7 +78,7 @@ font-size: 53px;
       </div>
       <div class="mdui-collapse-item-body mdui-list">
         <a href="IZMLevelMaker.html" class="mdui-list-item mdui-ripple">IZM Level Maker</a>
-		<a href="rule.html" class="mdui-list-item mdui-ripple mdui-list-item-active">IZM Rules</a>
+		<a href="rule.html" class="mdui-list-item mdui-ripple">IZM Rules</a>
 		<a href="IZMPlant.html" class="mdui-list-item mdui-ripple ">IZM Plant Placer</a>
       </div>
     </div>
@@ -110,17 +110,15 @@ font-size: 53px;
         <a href="" class="mdui-list-item mdui-ripple ">By Tuan Tran (Coming Soon)</a>
       </div>
     </div>
-	<div class="mdui-collapse-item ">
+	<div class="mdui-collapse-item mdui-collapse-item-open">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">new_releases</i>
-        <div class="mdui-list-item-content">News </div>
+        <div class="mdui-list-item-content">News</div>
         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
       </div>
       <div class="mdui-collapse-item-body mdui-list">
-        <a href="news.html" class="mdui-list-item mdui-ripple ">Update changes</a>
-      </div>
-	  <div class="mdui-collapse-item-body mdui-list">
-        <a href="izmspoiler.html" class="mdui-list-item mdui-ripple ">New Update for IZM</a>
+        <a href="news.html" class="mdui-list-item mdui-ripple">Update changes</a>
+        <a href="izmspoiler.html" class="mdui-list-item mdui-ripple mdui-list-item-active">New Update for IZM</a>
       </div>
     </div>
     </div>
@@ -129,58 +127,33 @@ font-size: 53px;
 
 <a id="anchor-top"></a>
 <div class="mdui-container doc-container">
-  <h1 class="doc-title mdui-text-color-theme">IZM Level Rules</h1>
+  <h1 class="doc-title mdui-text-color-theme">IZM Update Spoiler</h1>
 
-  <nav class="doc-toc mdui-text-color-theme">
-    <ul>
-      <li><a data-scroll >Friendly Note: Please add IZMIP and SeedBank to IZM Levels that you have converted.</a></li>
-    </ul>
-  </nav>
-<p>
-<h1 class="doc-title mdui-text-color-theme">1. IZM Code games</h1>
-  <nav class="doc-toc mdui-text-color-theme">
-    <ul>
-      <li><a data-scroll href="https://drive.google.com/file/d/1kcIQxx5X2dX0cA-EPGCXwEANy7FT9A4R/view?usp=sharing">Please download available codegame here.</a></li>
-    </ul>
-  </nav>
-    </ul>
-  </nav>
-<h1 class="doc-title mdui-text-color-theme">2. IZM Rules when writing levels</h1>
-      <li><a style="font-size:20px" data-scroll> You can't put 2 brain produce plants in 1 levels.</a></li>  
-	  <p>
-      <a style="font-size:20px" >Example: Sunflower and Twin Sunflower, you can only pick 1.</a>
-	  <p>
-	  <li><a style="font-size:20px" data-scroll> About IZM Intro. It depends on you using "chooser" or "preset"</a></li>  
-	  <p>
-      <a style="font-size:20px" >Example: If you using "preset", please keep IZMIntro. But if you want to choose zombies like "chooser", please use "IZMSeedBankIntro"</a>
-	  <p>
-	  <li><a style="font-size:20px" data-scroll> About SeedBank. It depends on you using "chooser" or "preset"</a></li>  
-	  <p>
-      <a style="font-size:20px" >Example: If you using "preset", please put zombies code from the Codegame to PresetPlantList. If you using "chooser", please add zombie codes to "PlantWhiteList" and "PlantBlackList"</a>
-	  <p>
-	   <nav class="doc-toc mdui-text-color-theme">
-    <ul>
-      <li><a data-scroll >Important Note: Kongfu Special Zombies only works in IZMKongFuStage, they will cause bugs when run in normal Stage.</a></li>
-    </ul>
-  </nav>
+  <a style="font-size:20px" >Everything here is provided by MF + Beast.</a>
   <p>
-  <li><a style="font-size:20px" data-scroll> About Zombie Place Column. It depends on where you want to place zombie</a></li>  
-	  <p>
-      <a style="font-size:20px" >It will come from the opposide side of the lawn, but it limit is from 4 - 6. More will prevent crash.</a>
-	  <p>
-	  <li><a style="font-size:20px" data-scroll> About Zombie Trigger Spawn Column. It is 9 - Zombie Place Column </a></li>  
-	  <p>
-      <a style="font-size:20px" >It limit is 3 - 5. More will cause crash.</a>
-	  <p>
-	  <nav class="doc-toc mdui-text-color-theme">
-    <ul>
-      <li><a data-scroll >Important Note: After Level Maker make you the Level.json, you have to put IZMIP (Plant Placer) and SeedBank to your IZM Level works. </a></li>
-	  <p>
-	  <li><a data-scroll >Do not adding any custom rewards or Powerups, it will make your game crashed. Also please fill in all the datas from Level Maker except Description and Level Name can be blank. </a></li>
-    </ul>
-  </nav>
+  <a style="font-size:20px" >Far Future Update</a>
   <p>
-  <a style="font-size:20px" >All the Level rules are provided by MF + Beast. Thank you for reading! Hope we can see your Fan Made levels in the next update!</a>
+  <img src="https://i0.hdslb.com/bfs/album/60a7f25a31ecb121b7d344991d842088b535e1b6.gif" alt="New animation" />
+  <p>
+  <a style="font-size:20px" >Brand New Map and Redesigned levels</a>
+  <p>
+  <img src="https://i0.hdslb.com/bfs/album/2bb4003947d3e1598a97ca72fe3ba7cf50b49045.png@518w_1e_1c.png" alt="Map1" />
+  <p>
+  <img src="https://i0.hdslb.com/bfs/album/098551ca97ff9096b2953bb29d89dfb531f85995.png@518w_1e_1c.png" alt="Map2" />
+  <p>
+   <a style="font-size:20px" >Wall Nut Bowling</a>
+   <p>
+   <img src="https://i0.hdslb.com/bfs/album/5ab16921373a1a29abe8d9f9f92d89faa242d854.gif" alt="WallNut" />
+   <p>
+    <a style="font-size:20px" >Screen Door Zombie</a>
+	
+   <p>
+   <img src="https://i0.hdslb.com/bfs/album/8e83df008334a83b2e24ff3f9abe39682318e22e.gif" alt="Screen1" />
+   <img src="https://i0.hdslb.com/bfs/album/384c7c29c9248d1ebfcdcf8a609b8b761b5ea74e.gif" alt="Screen2" />
+   <p>
+   <a style="font-size:20px" >Explore Edition Veteran Armor 2</a>
+   <p>
+   <img src="https://i0.hdslb.com/bfs/album/6ee86b7c01d61a2540858da89ee210af8fc51fd8.gif" alt="and i oof" />
     </ul>
   </div>
 
