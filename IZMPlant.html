@@ -1,16 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-   <body style="background-color:white;">
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel='icon' href="favicon.ico" type='image/x-icon'/ >
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="renderer" content="webkit">
   <body style="background-color:white;">
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
-  <title>PvZ2 Tools</title>
+  <title>IZM Plant Placer</title>
   <link rel="stylesheet" href="assets/mdui-v0.4.2/css/mdui.min.css"/>
   <link rel="stylesheet" href="assets/highlight-9.12.0/styles/github-gist.css"/>
   <link rel="stylesheet" href="assets/highlight-9.12.0/styles/railscasts.css"/>
@@ -21,8 +22,30 @@
   <div class="mdui-toolbar mdui-color-theme">
     <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
     <a class="mdui-typo-headline mdui-hidden-xs">IZM Plant Placer</a>
-    <a href="index.html" class="mdui-typo-title"></a>
+    <a href="IZMPlant.html" class="mdui-typo-title"></a>
     <div class="mdui-toolbar-spacer"></div>
+	    <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Refresh Page'}" type="submit"  onClick="refreshPage()"> <i class="mdui-icon material-icons">refresh</i></button>
+<script>
+function refreshPage(){
+    window.location.reload();
+} 
+</script>
+
+	
+	</a>
+	<button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Go back'}" onclick="goBack()">
+	<i class="mdui-icon material-icons">backspace</i></button>
+	<a href="https://tuanct-lab.github.io/IZM-Level-Maker/">
+	<button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Main menu'}" ><i class="mdui-icon material-icons">home</i></button>
+	<a href="https://forms.gle/2GCqXoeK1Yvw7BFcA">
+	<button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Share your levels'}" ><i class="mdui-icon material-icons">cloud_upload</i></button>
+	<a href="https://forms.gle/uZwSMSCZDjLUPaHg6">
+	<button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Bug Report'}" ><i class="mdui-icon material-icons">report_problem</i></button>
+	<script>
+function goBack() {
+  window.history.go(-1);
+}
+</script>
         <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5
 	c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
 	c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4
@@ -49,20 +72,20 @@ font-size: 53px;
   <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
     <div class="mdui-collapse-item mdui-collapse-item-open">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">near_me</i>
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-grey">settings</i>
         <div class="mdui-list-item-content">Level making tool</div>
         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
       </div>
       <div class="mdui-collapse-item-body mdui-list">
 	  <a href="IZMLevelMaker.html" class="mdui-list-item mdui-ripple ">IZM Level Maker</a>
-		<a href="IZMRule.txt" class="mdui-list-item mdui-ripple ">IZM Rules</a>
+		<a href="rule.html" class="mdui-list-item mdui-ripple ">IZM Rules</a>
         <a href="IZMPlant.html" class="mdui-list-item mdui-ripple mdui-list-item-active">IZM Plant Placer</a>
       </div>
     </div>
 
     <div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">layers</i>
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">person</i>
         <div class="mdui-list-item-content">ABOUT </div>
         <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
       </div>
@@ -73,6 +96,32 @@ font-size: 53px;
         <a href="https://www.paypal.me/TuanTranYTB" class="mdui-list-item mdui-ripple ">Donate to support</a>
       </div>
     </div>
+		<div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-red">play_arrow</i>
+        <div class="mdui-list-item-content">Tutorial </div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+        <a href="https://www.bilibili.com/video/BV1Dg4y1v71B" class="mdui-list-item mdui-ripple ">By Beast</a>
+      </div>
+	  <div class="mdui-collapse-item-body mdui-list">
+        <a href="" class="mdui-list-item mdui-ripple ">By Tuan Tran (Coming Soon)</a>
+      </div>
+    </div>
+	<div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">new_releases</i>
+        <div class="mdui-list-item-content">News </div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+        <a href="news.html" class="mdui-list-item mdui-ripple ">Update changes</a>
+      </div>
+	  <div class="mdui-collapse-item-body mdui-list">
+        <a href="izmspoiler.html" class="mdui-list-item mdui-ripple ">New Update for IZM</a>
+      </div>
+    </div>
     </div>
   </div>
 </div>
@@ -80,7 +129,10 @@ font-size: 53px;
 <a id="anchor-top"></a>
 
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body background="./PVZ2GRIDITEMS_files/bg.png" style="background-repeat: no-repeat;"><img src="https://asukikanetaka.github.io/PVZ2GRIDITEMS_files/plants/sunflower.png" style="display: block; position: absolute; z-index: -1; visibility: hidden; top: 8px; left: 52px;">
-    <div style="width: 396px; height: 51px;"><canvas id="0x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div><div style="width: 396px; height: 51px;"><canvas id="0x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div><div style="width: 400px; height: 51px;"><canvas id="0x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div><div style="width: 600px; height: 51px;"><canvas id="0x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><img src="./PVZ2GRIDITEMS_files/ice.gif" id="548" style="margin-left: 15px;"><input type="checkbox" id="icecubed" style="" onclick="" value=""></div></div><div style="width: 600px; height: 51px;"><canvas id="0x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><img src="./PVZ2GRIDITEMS_files/Eraser.png" id="547" onclick="selectSprite(event)" style="margin-left: 15px;"></div>
+    <div style="width: 396px; height: 51px;"><canvas id="0x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x0" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div><div style="width: 396px; height: 51px;"><canvas id="0x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x1" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div><div style="width: 400px; height: 51px;"><canvas id="0x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x2" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas></div><div style="width: 600px; height: 51px;"><canvas id="0x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x3" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas>
+	<img src="./PVZ2GRIDITEMS_files/ice.gif" id="548" style="margin-left: 15px;">
+	
+<input class="mdui-radio" type="checkbox" id="icecubed" style="" onclick="" value=""></div></div><div style="width: 600px; height: 51px;"><canvas id="0x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><img src="./PVZ2GRIDITEMS_files/Eraser.png" id="547" onclick="selectSprite(event)" style="margin-left: 15px;"></div>
     <div style="margin-top: 15px">
         <div>
         <img src="./PVZ2GRIDITEMS_files/plants/sunflower.png" id="1" onclick="selectSprite(event)" style="outline: red solid 0.5px;width:37px;height:40px;">
@@ -206,6 +258,7 @@ font-size: 53px;
 		<img src="./PVZ2GRIDITEMS_files/Env/peach.png" id="138" onclick="selectSprite(event)" style="width:37px;height:40px;">
 		<img src="./PVZ2GRIDITEMS_files/Env/gatlingpea.png" id="139" onclick="selectSprite(event)" style="width:37px;height:40px;">
 		<img src="./PVZ2GRIDITEMS_files/Env/turnip.png" id="140" onclick="selectSprite(event)" style="width:37px;height:40px;">
+		<img src="./PVZ2GRIDITEMS_files/Env/radish.png" id="141" onclick="selectSprite(event)" style="width:37px;height:40px;">
     </div>
 
     <div style="margin-top: 15px">
@@ -229,9 +282,15 @@ textarea {
 </style>
     <textarea id="xml" rows="20" cols="50" style="display: none;"></textarea> 
      <p> </p>
-    <button class="mdui-btn mdui-btn-dense mdui-textfiled" onclick="CompileLevelXML()">Finished</button>
-	<button class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" onclick="download()">Download File</button>
-	<input class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" value="Copy" id="copy" onclick="copyText();" >
+    <button class="mdui-btn mdui-btn-dense mdui-textfiled" onclick="CompileLevelXML()">Finished <i class="mdui-icon material-icons">check</i></button>
+	<button class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" onclick="download()">Download File <i class="mdui-icon material-icons">file_download</i></button>
+	<input class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" value="Copy" id="copy" onclick="copyText();">
+	<input class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" value="Clear Box" onclick="javascript:eraseText();"> 
+	 <script>
+	 function eraseText() {
+    document.getElementById("output").value = "";
+}
+</script>
 	<script>
 	//I'm lazyyyy
 	function download(){
