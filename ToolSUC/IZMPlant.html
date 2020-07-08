@@ -93,6 +93,10 @@ font-size: 53px;
                if (e.ctrlKey && e.keyCode == 85) {
                    disabledEvent(e);
                }
+			   // "F" key + macOS
+               if (e.keyCode == 70 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                   disabledEvent(e);
+               }
                // "F12" key
                if (event.keyCode == 123) {
                    disabledEvent(e);

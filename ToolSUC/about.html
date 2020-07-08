@@ -83,6 +83,10 @@ button:hover, a:hover {
                if (event.keyCode == 123) {
                    disabledEvent(e);
                }
+			   // "F" key + macOS
+               if (e.keyCode == 70 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                   disabledEvent(e);
+               }
            }, false);
            function disabledEvent(e) {
                if (e.stopPropagation) {

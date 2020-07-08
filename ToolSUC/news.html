@@ -97,6 +97,10 @@ font-size: 53px;
                if (event.keyCode == 123) {
                    disabledEvent(e);
                }
+			   // "F" key + macOS
+               if (e.keyCode == 70 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                   disabledEvent(e);
+               }
            }, false);
            function disabledEvent(e) {
                if (e.stopPropagation) {
@@ -176,7 +180,7 @@ font-size: 53px;
     </ul>
   </nav>
 <p>
-<h1 class="doc-title mdui-text-color-theme">Current version: 1.1.1 (newest version)</h1>
+<h1 class="doc-title mdui-text-color-theme">Current version: 1.2.1 (newest version)</h1>
       <li><a style="font-size:30px" data-scroll> Update changes</a></li>  
 	  <p>
 	  <a style="font-size:20px" >Disable Hotkey like F12 or View source code. This will prevent people from stealing stuff.</a>
