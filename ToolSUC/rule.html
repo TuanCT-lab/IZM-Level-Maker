@@ -92,6 +92,11 @@ font-size: 53px;
                    disabledEvent(e);
 				   alert("Don't try to steal my code man, it's not fun");
                }
+			   // "G" key + macOS
+               if (e.keyCode == 71 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                   disabledEvent(e);
+				   alert("Don't try to steal my code man, it's not fun");
+               }
                // "S" key + macOS
                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
                    disabledEvent(e);
