@@ -68,26 +68,37 @@ font-size: 53px;
                // "I" key
                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
                    disabledEvent(e);
+				   alert("Don't try to steal my code man, it's not fun");
                }
                // "J" key
                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
                    disabledEvent(e);
+				   alert("Don't try to steal my code man, it's not fun");
                }
                // "S" key + macOS
                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
                    disabledEvent(e);
+				   alert("Don't try to steal my code man, it's not fun");
+               }
+			   // "P" for Print
+               if (e.keyCode == 80 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                   disabledEvent(e);
+				   alert("Don't try to steal my code man, it's not fun");
                }
 			   // "F" key + macOS
                if (e.keyCode == 70 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
                    disabledEvent(e);
+				   alert("Don't try to steal my code man, it's not fun");
                }
                // "U" key
                if (e.ctrlKey && e.keyCode == 85) {
                    disabledEvent(e);
+				   alert("Don't try to steal my code man, it's not fun");
                }
                // "F12" key
                if (event.keyCode == 123) {
                    disabledEvent(e);
+				   alert("Don't try to steal my code man, it's not fun");
                }
            }, false);
            function disabledEvent(e) {
