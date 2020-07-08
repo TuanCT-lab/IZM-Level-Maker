@@ -24,6 +24,7 @@
     <a class="mdui-typo-headline mdui-hidden-xs">IZM Plant Placer</a>
     <a href="IZMPlant.html" class="mdui-typo-title"></a>
     <div class="mdui-toolbar-spacer"></div>
+	<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-dialog="{target: '#dialog-docs-theme'}" mdui-tooltip="{content: 'Change color'}"><i class="mdui-icon material-icons">color_lens</i></span>
 	    <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Refresh Page'}" type="submit"  onClick="refreshPage()"> <i class="mdui-icon material-icons">refresh</i></button>
 <script>
 function refreshPage(){
@@ -567,25 +568,7 @@ function toggleoutputvisibility() {
   <div class="mdui-dialog-title">Change color</div>
   <div class="mdui-dialog-content">
 
-    <p class="mdui-typo-title">Theme color</p>
-    <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
-      <div class="mdui-col">
-        <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-layout" value="" checked/>
-          <i class="mdui-radio-icon"></i>
-          Light
-        </label>
-      </div>
-      <div class="mdui-col">
-        <label class="mdui-radio mdui-m-b-1">
-          <input type="radio" name="doc-theme-layout" value="dark" />
-          <i class="mdui-radio-icon"></i>
-          Dark
-        </label>
-      </div>
-    </div>
-
-    <p class="mdui-typo-title mdui-text-color-theme">Font color</p>
+    <p class="mdui-typo-title mdui-text-color-theme">Font + Background Color</p>
     <form class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
       <div class="mdui-col mdui-text-color-amber">
         <label class="mdui-radio mdui-m-b-1">
