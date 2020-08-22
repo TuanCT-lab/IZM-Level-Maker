@@ -19,22 +19,35 @@
 </head>
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar  mdui-theme-primary-indigo mdui-theme-accent-pink">
 <header class="mdui-appbar mdui-appbar-fixed">
+<div class="mdui-fab-wrapper" mdui-fab="">
+      <button class="mdui-fab mdui-ripple mdui-color-theme-accent">
+        <i class="mdui-icon material-icons">add</i>
+        <i class="mdui-icon mdui-fab-opened material-icons">mode_edit</i>
+      </button>
+      <div class="mdui-fab-dial" style="height: 0px;">
+	  <a href="https://forms.gle/2GCqXoeK1Yvw7BFcA">
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" style="transition-delay: 0ms;"><i class="mdui-icon material-icons">backup</i></button>
+		<a href="https://drive.google.com/folderview?id=11D-wcxvFhVphVBgeHi6k_XVCjCrn81Eb">
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink" style="transition-delay: 15ms;"><i class="mdui-icon material-icons">file_download</i></button>
+			<a href="https://www.youtube.com/watch?v=3Gp72mgg39I">
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-green" style="transition-delay: 30ms;"><i class="mdui-icon material-icons">video_library</i></button>
+			<a href="https://forms.gle/uZwSMSCZDjLUPaHg6">
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" style="transition-delay: 45ms;"><i class="mdui-icon material-icons">report_problem</i></button>
+      </div>
+    </div>
   <div class="mdui-toolbar mdui-color-theme">
     <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"  mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
     <a class="mdui-typo-headline mdui-hidden-xs">IZM Level Maker</a>
     <a href="index.html" class="mdui-typo-title"></a>
     <div class="mdui-toolbar-spacer"></div>
+	<button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Refresh Page'}" type="submit"  onClick="refreshPage()"> <i class="mdui-icon material-icons">refresh</i></button>
+<script>
+function refreshPage(){
+    window.location.reload();
+} 
+</script>
 	 <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-dialog="{target: '#dialog-docs-theme'}" mdui-tooltip="{content: 'Change color'}"><i class="mdui-icon material-icons">color_lens</i></span>
-	<a href="https://forms.gle/2GCqXoeK1Yvw7BFcA">
-	<button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Share your levels'}" ><i class="mdui-icon material-icons">cloud_upload</i></button>
-	<a href="https://mega.nz/file/gYUylayT#irBYnAeowHmb3VGy9icBDhZsRwnjMnpYQp4xT5Mp83s">
-	<button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Download Mod'}" ><i class="mdui-icon material-icons">file_download</i></button>
-	<a href="https://www.youtube.com/watch?v=3Gp72mgg39I">
-	<button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Download tutorial'}" ><i class="mdui-icon material-icons">video_library</i></button>
-	<a href="https://discord.gg/sjSfFz8">
-	<button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'IZM Discord'}" ><i class="mdui-icon material-icons">supervisor_account</i></button>
-	<a href="https://forms.gle/uZwSMSCZDjLUPaHg6">
-	<button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Bug Report'}" ><i class="mdui-icon material-icons">report_problem</i></button>
+	
         <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5
 	c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
 	c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4
@@ -46,6 +59,7 @@
   </div>
 </header>
 <style> 
+
 
 @font-face {
 font-size: 53px;
@@ -137,20 +151,7 @@ font-size: 53px;
         <a href="./ToolSUC/IZMPlant.html" class="mdui-list-item mdui-ripple ">IZM Plant Placer</a>
       </div>
     </div>
-
-    <div class="mdui-collapse-item ">
-      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">person</i>
-        <div class="mdui-list-item-content">ABOUT </div>
-        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-      </div>
-      <div class="mdui-collapse-item-body mdui-list">
-        <a href="./ToolSUC/about.html" class="mdui-list-item mdui-ripple ">About</a>
-      </div>
-	  <div class="mdui-collapse-item-body mdui-list">
-        <a href="https://www.paypal.me/TuanTranYTB" class="mdui-list-item mdui-ripple ">Donate to support</a>
-      </div>
-    </div>
+    
 	
 	<div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
@@ -162,7 +163,8 @@ font-size: 53px;
         <a href="https://www.bilibili.com/video/BV1Dg4y1v71B" class="mdui-list-item mdui-ripple ">By Beast</a>
       </div>
 	  <div class="mdui-collapse-item-body mdui-list">
-        <a href="" class="mdui-list-item mdui-ripple ">By Tuan Tran (Coming Soon)</a>
+	  
+        <a href="https://www.youtube.com/watch?v=8dVmrt-ZUnA" class="mdui-list-item mdui-ripple ">By Tuan Tran</a>
       </div>
     </div>
 	<div class="mdui-collapse-item ">
@@ -186,39 +188,89 @@ font-size: 53px;
 <a id="anchor-top"></a>
 
 <div class="mdui-container doc-container doc-no-cover">
-  <h1 class="doc-title mdui-text-color-theme">Plants vs. Zombies 2 : I Zombie Mod Level Maker</h1>
 
   <div class="doc-chapter">
     <div class="mdui-typo">
-      <p style="font-size:30px">I Zombie Mod Level Maker by <a href="https://www.youtube.com/channel/UC-f8xwkVR4BZioxwH6P2YSg" target="_blank">Tuan Tran</a>
-      <style>
- *{margin: 0;}
-   #app{margin: auto; width: 500px; height: 500px;position: relative;}
-  #app img{position: absolute;}
- @keyframes a_1{0.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.000000,0.000000,0.000000,1.000000,105.250000,181.300000)}5.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.001358,0.000000,0.000000,0.998535,105.150000,181.400000)}10.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.005493,0.000000,0.000000,0.994034,104.800000,181.800000)}15.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.011795,0.000000,0.000000,0.987198,104.250000,182.300000)}20.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.018723,0.000000,0.000000,0.979675,103.650000,182.900000)}25.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.024811,0.000000,0.000000,0.973053,103.100000,183.400000)}30.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.029419,0.000000,0.000000,0.968048,102.700000,183.800000)}35.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.032486,0.000000,0.000000,0.964737,102.450000,184.100000)}40.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.034164,0.000000,0.000000,0.962906,102.300000,184.200000)}45.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.034683,0.000000,0.000000,0.962341,102.250000,184.250000)}50.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.033585,0.000000,0.000000,0.963531,102.350000,184.150000)}55.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.030228,0.000000,0.000000,0.967194,102.650000,183.850000)}60.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.024918,0.000000,0.000000,0.972946,103.100000,183.400000)}65.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.018707,0.000000,0.000000,0.979691,103.650000,182.900000)}70.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.012756,0.000000,0.000000,0.986176,104.150000,182.350000)}75.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.007828,0.000000,0.000000,0.991486,104.550000,181.950000)}80.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.004181,0.000000,0.000000,0.995453,104.900000,181.650000)}85.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.001755,0.000000,0.000000,0.998093,105.100000,181.450000)}90.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.000412,0.000000,0.000000,0.999557,105.200000,181.300000)}95.000000%  {transform-origin:2.750000px 4.250000px;
-transform: matrix(1.000000,0.000000,0.000000,1.000000,105.250000,181.300000)}100%	{}}
-#t_1{animation:a_1 0.666667s steps(1,end)  infinite; }</style>
-</head><body><div id="app"><img src="texture/pumpkin_179x86.png" id="t_1"name="1"width="179"height="86" >
-</div>
+    <div class="mdui-col-sm-6 mdui-col-md-4">
+            <div class="mdui-card">
+              <div class="mdui-card-header">
+                <img class="mdui-card-header-avatar" src="./profile/owner.png">
+                <div class="mdui-card-header-title">Tuan Tran</div>
+                <div class="mdui-card-header-subtitle">Owner of the tool</div>
+              </div>
+              <div class="mdui-card-media">
+                <img src="./profile/card1.png">
+                <div class="mdui-card-menu">
+                </div>
+              </div>
+              <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">About this tool</div>
+                <div class="mdui-card-primary-subtitle">100% Free and no ads</div>
+              </div>
+              <div class="mdui-card-content">IZM Level Maker is a completely free program, support making levels for I Zombie Mod of MF & Beast.</div>
+              <div class="mdui-card-actions">
+			  <a href="https://www.youtube.com/channel/UC-f8xwkVR4BZioxwH6P2YSg">
+                <button class="mdui-btn mdui-ripple">Youtube</button>
+				</a>
+				<a href="https://space.bilibili.com/628219708">
+                <button class="mdui-btn mdui-ripple">Bilibili</button>
+				</a>
+              </div>
+            </div>
+          </div>
+		   <div class="doc-chapter">
+    <div class="mdui-typo">
+    <div class="mdui-col-sm-6 mdui-col-md-4">
+            <div class="mdui-card">
+              <div class="mdui-card-header">
+                <img class="mdui-card-header-avatar" src="./profile/MF.png">
+                <div class="mdui-card-header-title">MF</div>
+                <div class="mdui-card-header-subtitle">IZM Owner</div>
+              </div>
+              <div class="mdui-card-media">
+                <img src="./profile/card2.png">
+                <div class="mdui-card-menu">
+                </div>
+              </div>
+              <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">About MF</div>
+                <div class="mdui-card-primary-subtitle">Main texture, animations, codes product</div>
+              </div>
+              <div class="mdui-card-content">MF is a good guy, he keep the mod alive by making new freshy worlds & animations. Support him!</div>
+              <div class="mdui-card-actions">
+			  <a href="https://space.bilibili.com/35521848">
+                <button class="mdui-btn mdui-ripple">Bilibili</button>
+				</a>
+              </div>
+            </div>
+          </div>
+		   <div class="doc-chapter">
+    <div class="mdui-typo">
+    <div class="mdui-col-sm-6 mdui-col-md-4">
+            <div class="mdui-card">
+              <div class="mdui-card-header">
+                <img class="mdui-card-header-avatar" src="./profile/Beast.png">
+                <div class="mdui-card-header-title">Beast</div>
+                <div class="mdui-card-header-subtitle">IZM Owner</div>
+              </div>
+              <div class="mdui-card-media">
+                <img src="./profile/card3.png">
+                <div class="mdui-card-menu">
+                </div>
+              </div>
+              <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">About Beast</div>
+                <div class="mdui-card-primary-subtitle">Main level designer, Code & Texture</div>
+              </div>
+              <div class="mdui-card-content">While MF responsible for all products, Beast responsible for mostly all the codes in the PACKAGES & Textures. Support him!</div>
+              <div class="mdui-card-actions">
+			  <a href="https://space.bilibili.com/210379574/">
+                <button class="mdui-btn mdui-ripple">Bilibili</button>
+				</a>
+              </div>
+            </div>
+          </div>
+		  
 
 
   </div>
