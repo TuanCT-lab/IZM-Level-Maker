@@ -194,7 +194,8 @@ font-size: 53px;
 	<img src="./PVZ2GRIDITEMS_files/ice.gif" id="548" style="margin-left: 15px;">
 	
 <label class="mdui-switch"><input class="mdui-radio" type="checkbox" id="icecubed" style="" onclick="iceFunction()" value=""><i class="mdui-switch-icon"></i>
-            </label></div></div><div style="width: 600px; height: 51px;"><canvas id="0x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><img src="./PVZ2GRIDITEMS_files/Eraser.png" id="547" onclick="selectSprite(event)" style="margin-left: 15px;"></div>
+            </label></div></div><div style="width: 600px; height: 51px;"><canvas id="0x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="1x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="2x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="3x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="4x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="5x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="6x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="7x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas><canvas id="8x4" style="width: 44px; height: 51px; outline: rgba(0, 0, 0, 0.2) solid 0.5px;"></canvas>
+			<img src="./PVZ2GRIDITEMS_files/Eraser.png" id="547" onclick="selectSprite(event);eraserFunction()" style="margin-left: 15px;"></div>
     <div style="margin-top: 15px">
         <div>
         <img src="./PVZ2GRIDITEMS_files/plants/sunflower.png" id="1" onclick="selectSprite(event)" style="outline: red solid 0.5px;width:37px;height:40px;">
@@ -390,7 +391,57 @@ textarea {
 }
 </style>
 <div id="snackbar">Success</div>
+<style>
+#eraserln {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #BDB6B4;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
 
+#eraserln.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
+<div id="eraserln">Changed Eraser</div>
+<script>
+function eraserFunction() {
+  var m = document.getElementById("eraserln");
+  m.className = "show";
+  setTimeout(function(){ m.className = m.className.replace("show", ""); }, 3000);
+}
+</script>
 <style>
 #icesnack {
   visibility: hidden;
