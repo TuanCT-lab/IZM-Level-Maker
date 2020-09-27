@@ -195,52 +195,54 @@ font-size: 53px;
 	<p style="color:red">Level Generator for I Zombie Mod by Tuan Tran</p>
 	<p style="color:red">WARNING: All IZM custom rewards are set default as Bag of Coins. Do not adding any Reward unless you want your pp.dat broken</p>
 	<p>
-
-	<p style="font-size:20px">Description:
-    <input  type="text" autocapitalize="off" id="description" style="width: 20%" value="">
-	<p style="font-size:20px"> Show Zombie Threat Alerts:
-    <input type="text" id="showthreat" style="width: 7%" value="false">
-
-    </p>
-	<p style="font-size:20px"> Level Number:
-    <input  type="text" id="levelnumber" style="width: 5%" value="">
-
-    </p>
-	<p style="font-size:20px"> Starting Brain:
-    <input  type="text" id="startbrain" style="width: 7%" value="">
-
-    </p>
-	<p style="font-size:20px"> Intro:
-    <input  type="text" id="intro" style="width: 13%" value="IZMIntro">
-
-    </p>
-	<p style="font-size:20px"> Speedy Zombie:
-    <input  type="text" id="speedtest" style="width: 7%" value="false">
-
-    </p>	
-	<p style="font-size:20px"> Seed Slot Override:
-    <input  type="text" id="seedslot" style="width: 7%" value="6">
-
-    </p>	
-	<p style="font-size:20px"> SeedBank Preset or Chooser:
-    <input  type="text" id="seedbank" style="width: 10%" value="preset">
-
-    </p>
-	<a class="mdui-btn-icon"> 	
-	<p style="font-size:20px"> Level Name:
-    <input  type="text" id="byname" style="width: 7%" value="">
-
-    </p>	
-	<p style="font-size:20px"> Stage Module:
-    <input  type="text" id="stage" style="width: 13%" value="IZMStage">
-
-    </p>
-	<p style="font-size:20px"> Zombie Place Column (4 - 6):
-    <input  type="text" id="gridlist" style="width: 7%" value="4">
-
-    </p>
-	<p style="font-size:20px"> Zombie Trigger Spawn Column (3 - 5):
-    <input  type="text" id="trigger" style="width: 7%" value="">
+        <div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">Description</label>
+          <input class="mdui-textfield-input" placeholder="Description" type="text" autocapitalize="off" id="description" value="">
+        </div>
+	<div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">Show Zombie Threat Alerts</label>
+          <input class="mdui-textfield-input" placeholder="Show Zombie Threat Alerts" type="text" id="showthreat" autocapitalize="off" value="false">
+        </div>
+		<div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">Level Number</label>
+          <input class="mdui-textfield-input" placeholder="Level Number" type="text" id="levelnumber" autocapitalize="off" value="">
+        </div>
+<div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">Starting Brain</label>
+          <input class="mdui-textfield-input" placeholder="Starting Brain" type="text" id="startbrain" autocapitalize="off" value="">
+        </div>
+		<div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">Intro</label>
+          <input class="mdui-textfield-input" placeholder="Starting Brain" type="text" id="intro" autocapitalize="off" value="IZMIntro">
+        </div>
+		<div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">Speedy Zombie</label>
+          <input class="mdui-textfield-input" placeholder="Speedy Zombie" type="text" id="speedtest" autocapitalize="off" value="false">
+        </div>
+		<div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">Seed Slot Override</label>
+          <input class="mdui-textfield-input" placeholder="Seed Slot Override" type="text" id="seedslot" autocapitalize="off" value="6">
+        </div>
+		<div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">SeedBank Preset or Chooser</label>
+          <input class="mdui-textfield-input" placeholder="Seed Slot Override" type="text" id="seedbank" autocapitalize="off" value="preset">
+        </div>
+		<div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">Level Name</label>
+          <input class="mdui-textfield-input" placeholder="Level Name" type="text" id="byname" autocapitalize="off" value="">
+        </div>
+		<div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">Stage Module</label>
+          <input class="mdui-textfield-input" placeholder="Stage Module" type="text" id="stage" autocapitalize="off" value="IZMStage">
+        </div>
+		<div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">Zombie Place Column (4 - 6)</label>
+          <input class="mdui-textfield-input" placeholder="Zombie Place Column (4 - 6)" type="text" id="gridlist" autocapitalize="off" value="4">
+        </div>
+		<div class="mdui-textfield mdui-textfield-floating-label">
+          <label class="mdui-textfield-label">Zombie Trigger Spawn Column (3 - 5)</label>
+          <input class="mdui-textfield-input" placeholder="Zombie Trigger Spawn Column (3 - 5)" type="text" id="trigger" autocapitalize="off" value="4">
+        </div>
 
     </p>
     </p>
@@ -269,10 +271,61 @@ textarea {
 </style>
     <textarea id="xml" rows="20" cols="50" style="display: none;"></textarea> 
      <p> </p>
-    <button class="mdui-btn mdui-btn-dense mdui-textfiled" onclick="CompileLevelXML()">Finished </button>
-	<button class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" onclick="download()">Download File </button>
-	<input class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" value="Copy" id="copy" onclick="copyText();">
-	 <input class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" value="Clear Box" onclick="javascript:eraseText();"> 
+    <button class="mdui-btn mdui-btn-dense mdui-textfiled" onclick="CompileLevelXML();myFunction()">Finished </button>
+	<button class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" onclick="download();myFunction()">Download File </button>
+	<input class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" value="Copy" id="copy" onclick="copyText();myFunction();">
+	 <input class="mdui-btn mdui-btn-dense mdui-textfiled" type="button" value="Clear Box" onclick="javascript:eraseText();myFunction();"> 
+	 <style>
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #07DD17;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
+<div id="snackbar">Success</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
 	 <script>
 	 function eraseText() {
     document.getElementById("output").value = "";
@@ -304,7 +357,7 @@ function copyText(){
 </script>
 
      <p> </p>
-    <textarea id="output" rows="10" cols="50" style="display: none;"></textarea>
+    <textarea  id="output" rows="10" cols="50" style="display: none;"></textarea>
 	<script>
 	function download(){
     var text = document.getElementById("output").value;
